@@ -1,0 +1,555 @@
+Command: /home/iriska/.espressif/python_env/idf6.0_py3.13_env/bin/python /home/iriska/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/iriska/ssd/transformer/build/esp32_ampermeter_display.elf /home/iriska/ssd/transformer/build/transformer.elf /home/iriska/ssd/transformer/build/bootloader/bootloader.elf -m '/home/iriska/.espressif/python_env/idf6.0_py3.13_env/bin/python' '/home/iriska/esp/esp-idf/tools/idf.py'
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15904
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5-dev-3822-g27d68f57e6-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Jul 10 2025 20:39:08[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v1.1[0m
+[0;32mI (35) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (39) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (42) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (50) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (59) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (82) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0bf1ch ( 48924) map[0m
+[0;32mI (106) esp_image: segment 1: paddr=0001bf44 vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001bf6c vaddr=3ffb0000 size=024dch (  9436) load[0m
+[0;32mI (114) esp_image: segment 3: paddr=0001e450 vaddr=40080000 size=01bc8h (  7112) load[0m
+[0;32mI (121) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=1a6d4h (108244) map[0m
+[0;32mI (162) esp_image: segment 5: paddr=0003a6fc vaddr=40081bc8 size=0cfd8h ( 53208) load[0m
+[0;32mI (190) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (191) boot: Disabling RNG early entropy source...[0m
+[0;32mI (201) cpu_start: Multicore app[0m
+[0;32mI (209) cpu_start: Pro cpu start user code[0m
+[0;32mI (209) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (209) app_init: Application information:[0m
+[0;32mI (209) app_init: Project name:     esp32_ampermeter_display[0m
+[0;32mI (215) app_init: App version:      1[0m
+[0;32mI (218) app_init: Compile time:     Jul 10 2025 20:39:21[0m
+[0;32mI (223) app_init: ELF file SHA256:  6a2f400be...[0m
+[0;32mI (228) app_init: ESP-IDF:          v5.5-dev-3822-g27d68f57e6-dirty[0m
+[0;32mI (234) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (237) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (241) efuse_init: Chip rev:         v1.1[0m
+[0;32mI (245) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (252) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (257) heap_init: At 3FFB2E08 len 0002D1F8 (180 KiB): DRAM[0m
+[0;32mI (262) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (267) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (273) heap_init: At 4008EBA0 len 00011460 (69 KiB): IRAM[0m
+[0;32mI (279) spi_flash: detected chip: generic[0m
+[0;32mI (282) spi_flash: flash io: dio[0m
+[0;33mW (285) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (297) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (305) main_task: Started on CPU0[0m
+[0;32mI (315) main_task: Calling app_main()[0m
+[0;32mI (695) MAIN: RMS Current: 0.21 A[0m
+[0;32mI (695) main_task: Returned from app_main()[0m
+[0;32mI (1255) MAIN: RMS Current: 0.22 A[0m
+[0;32mI (1815) MAIN: RMS Current: 0.21 A[0m
+[0;32mI (2375) MAIN: RMS Current: 0.21 A[0m
+[0;32mI (2935) MAIN: RMS Current: 0.22 A[0m
+[0;32mI (3495) MAIN: RMS Current: 0.22 A[0m
+[0;32mI (4055) MAIN: RMS Current: 0.21 A[0m
+[0;32mI (4615) MAIN: RMS Current: 0.22 A[0m
+[0;32mI (5175) MAIN: RMS Current: 0.21 A[0m
+[0;32mI (5735) MAIN: RMS Current: 0.21 A[0m
+[0;32mI (6295) MAIN: RMS Current: 0.21 A[0m
+[0;32mI (6855) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (7415) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (7975) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (8535) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (9095) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (9655) MAIN: RMS Current: 0.18 A[0m
+[0;32mI (10215) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (10775) MAIN: RMS Current: 0.18 A[0m
+[0;32mI (11335) MAIN: RMS Current: 0.18 A[0m
+[0;32mI (11895) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (12455) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (13015) MAIN: RMS Current: 0.18 A[0m
+[0;32mI (13575) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (14135) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (14695) MAIN: RMS Current: 0.18 A[0m
+[0;32mI (15255) MAIN: RMS Current: 0.18 A[0m
+[0;32mI (15815) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (16375) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (16935) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (17495) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (18055) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (18615) MAIN: RMS Current: 0.20 A[0m
+[0;32mI (19175) MAIN: RMS Current: 0.20 A[0m
+[0;32mI (19735) MAIN: RMS Current: 0.18 A[0m
+[0;32mI (20295) MAIN: RMS Current: 0.20 A[0m
+[0;32mI (20855) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (21415) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (21975) MAIN: RMS Current: 0.20 A[0m
+[0;32mI (22535) MAIN: RMS Current: 0.20 A[0m
+[0;32mI (23095) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (23655) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (24215) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (24775) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (25335) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (25895) MAIN: RMS Current: 0.20 A[0m
+[0;32mI (26455) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (27015) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (27575) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (28135) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (28695) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (29255) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (29815) MAIN: RMS Current: 0.20 A[0m
+[0;32mI (30375) MAIN: RMS Current: 0.20 A[0m
+[0;32mI (30935) MAIN: RMS Current: 0.20 A[0m
+[0;32mI (31495) MAIN: RMS Current: 0.20 A[0m
+[0;32mI (32055) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (32615) MAIN: RMS Current: 0.20 A[0m
+[0;32mI (33175) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (33735) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (34295) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (34855) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (35415) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (35975) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (36535) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (37095) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (37655) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (38215) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (38775) MAIN: RMS Current: 0.20 A[0m
+[0;32mI (39335) MAIN: RMS Current: 0.20 A[0m
+[0;32mI (39895) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (40455) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (41015) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (41575) MAIN: RMS Current: 0.20 A[0m
+[0;32mI (42135) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (42695) MAIN: RMS Current: 0.20 A[0m
+[0;32mI (43255) MAIN: RMS Current: 0.20 A[0m
+[0;32mI (43815) MAIN: RMS Current: 0.20 A[0m
+[0;32mI (44375) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (44935) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (45495) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (46055) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (46615) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (47175) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (47735) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (48295) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (48855) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (49415) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (49975) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (50535) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (51095) MAIN: RMS Current: 0.20 A[0m
+[0;32mI (51655) MAIN: RMS Current: 0.18 A[0m
+[0;32mI (52215) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (52775) MAIN: RMS Current: 0.20 A[0m
+[0;32mI (53335) MAIN: RMS Current: 0.20 A[0m
+[0;32mI (53895) MAIN: RMS Current: 0.20 A[0m
+[0;32mI (54455) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (55015) MAIN: RMS Current: 0.20 A[0m
+[0;32mI (55575) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (56135) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (56695) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (57255) MAIN: RMS Current: 0.18 A[0m
+[0;32mI (57815) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (58375) MAIN: RMS Current: 0.18 A[0m
+[0;32mI (58935) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (59495) MAIN: RMS Current: 0.18 A[0m
+[0;32mI (60055) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (60615) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (61175) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (61735) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (62295) MAIN: RMS Current: 0.20 A[0m
+[0;32mI (62855) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (63415) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (63975) MAIN: RMS Current: 0.18 A[0m
+[0;32mI (64535) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (65095) MAIN: RMS Current: 0.20 A[0m
+[0;32mI (65655) MAIN: RMS Current: 0.20 A[0m
+[0;32mI (66215) MAIN: RMS Current: 0.20 A[0m
+[0;32mI (66775) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (67335) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (67895) MAIN: RMS Current: 0.20 A[0m
+[0;32mI (68455) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (69015) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (69575) MAIN: RMS Current: 0.20 A[0m
+[0;32mI (70135) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (70695) MAIN: RMS Current: 0.20 A[0m
+[0;32mI (71255) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (71815) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (72375) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (72935) MAIN: RMS Current: 0.20 A[0m
+[0;32mI (73495) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (74055) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (74615) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (75175) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (75735) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (76295) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (76855) MAIN: RMS Current: 0.18 A[0m
+[0;32mI (77415) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (77975) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (78535) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (79095) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (79655) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (80215) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (80775) MAIN: RMS Current: 0.18 A[0m
+[0;32mI (81335) MAIN: RMS Current: 0.18 A[0m
+[0;32mI (81895) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (82455) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (83015) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (83575) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (84135) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (84695) MAIN: RMS Current: 0.18 A[0m
+[0;32mI (85255) MAIN: RMS Current: 0.17 A[0m
+[0;32mI (85815) MAIN: RMS Current: 0.16 A[0m
+[0;32mI (86375) MAIN: RMS Current: 0.17 A[0m
+[0;32mI (86935) MAIN: RMS Current: 0.18 A[0m
+[0;32mI (87495) MAIN: RMS Current: 0.15 A[0m
+[0;32mI (88055) MAIN: RMS Current: 0.15 A[0m
+[0;32mI (88615) MAIN: RMS Current: 0.17 A[0m
+[0;32mI (89175) MAIN: RMS Current: 0.17 A[0m
+[0;32mI (89735) MAIN: RMS Current: 0.16 A[0m
+[0;32mI (90295) MAIN: RMS Current: 0.16 A[0m
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15904
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (57) boot: ESP-IDF v5.5-dev-3822-g27d68f57e6-dirty 2nd stage bootloader[0m
+[0;32mI (57) boot: compile time Jul 10 2025 20:39:08[0m
+[0;32mI (57) boot: Multicore bootloader[0m
+[0;32mI (61) boot: chip revision: v1.1[0m
+[0;32mI (64) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (68) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (71) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (75) boot: Enabling RNG early entropy source...[0m
+[0;32mI (79) boot: Partition Table:[0m
+[0;32mI (82) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (88) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (95) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (101) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (108) boot: End of partition table[0m
+[0;32mI (111) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0bf1ch ( 48924) map[0m
+[0;32mI (136) esp_image: segment 1: paddr=0001bf44 vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (136) esp_image: segment 2: paddr=0001bf6c vaddr=3ffb0000 size=024dch (  9436) load[0m
+[0;32mI (143) esp_image: segment 3: paddr=0001e450 vaddr=40080000 size=01bc8h (  7112) load[0m
+[0;32mI (150) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=1a6d4h (108244) map[0m
+[0;32mI (192) esp_image: segment 5: paddr=0003a6fc vaddr=40081bc8 size=0cfd8h ( 53208) load[0m
+[0;32mI (220) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (220) boot: Disabling RNG early entropy source...[0m
+[0;32mI (230) cpu_start: Multicore app[0m
+[0;32mI (239) cpu_start: Pro cpu start user code[0m
+[0;32mI (239) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (239) app_init: Application information:[0m
+[0;32mI (239) app_init: Project name:     esp32_ampermeter_display[0m
+[0;32mI (244) app_init: App version:      1[0m
+[0;32mI (248) app_init: Compile time:     Jul 10 2025 20:39:21[0m
+[0;32mI (253) app_init: ELF file SHA256:  6a2f400be...[0m
+[0;32mI (257) app_init: ESP-IDF:          v5.5-dev-3822-g27d68f57e6-dirty[0m
+[0;32mI (263) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (267) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (271) efuse_init: Chip rev:         v1.1[0m
+[0;32mI (275) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (281) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (286) heap_init: At 3FFB2E08 len 0002D1F8 (180 KiB): DRAM[0m
+[0;32mI (291) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (297) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (302) heap_init: At 4008EBA0 len 00011460 (69 KiB): IRAM[0m
+[0;32mI (309) spi_flash: detected chip: generic[0m
+[0;32mI (311) spi_flash: flash io: dio[0m
+[0;33mW (314) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (326) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (334) main_task: Started on CPU0[0m
+[0;32mI (344) main_task: Calling app_main()[0m
+[0;32mI (724) MAIN: RMS Current: 0.16 A[0m
+[0;32mI (724) main_task: Returned from app_main()[0m
+[0;32mI (1284) MAIN: RMS Current: 0.17 A[0m
+[0;32mI (1844) MAIN: RMS Current: 0.17 A[0m
+[0;32mI (2404) MAIN: RMS Current: 0.17 A[0m
+[0;32mI (2964) MAIN: RMS Current: 0.17 A[0m
+[0;32mI (3524) MAIN: RMS Current: 0.17 A[0m
+[0;32mI (4084) MAIN: RMS Current: 0.17 A[0m
+[0;32mI (4644) MAIN: RMS Current: 0.17 A[0m
+[0;32mI (5204) MAIN: RMS Current: 0.18 A[0m
+[0;32mI (5764) MAIN: RMS Current: 0.17 A[0m
+[0;32mI (6324) MAIN: RMS Current: 0.17 A[0m
+[0;32mI (6884) MAIN: RMS Current: 0.18 A[0m
+[0;32mI (7444) MAIN: RMS Current: 0.17 A[0m
+[0;32mI (8004) MAIN: RMS Current: 0.18 A[0m
+[0;32mI (8564) MAIN: RMS Current: 0.17 A[0m
+[0;32mI (9124) MAIN: RMS Current: 0.18 A[0m
+[0;32mI (9684) MAIN: RMS Current: 0.18 A[0m
+[0;32mI (10244) MAIN: RMS Current: 0.18 A[0m
+[0;32mI (10804) MAIN: RMS Current: 0.18 A[0m
+[0;32mI (11364) MAIN: RMS Current: 0.18 A[0m
+[0;32mI (11924) MAIN: RMS Current: 0.18 A[0m
+[0;32mI (12484) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (13044) MAIN: RMS Current: 0.18 A[0m
+[0;32mI (13604) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (14164) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (14724) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (15284) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (15844) MAIN: RMS Current: 0.18 A[0m
+[0;32mI (16404) MAIN: RMS Current: 0.18 A[0m
+[0;32mI (16964) MAIN: RMS Current: 0.18 A[0m
+[0;32mI (17524) MAIN: RMS Current: 0.18 A[0m
+[0;32mI (18084) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (18644) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (19204) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (19764) MAIN: RMS Current: 0.18 A[0m
+[0;32mI (20324) MAIN: RMS Current: 0.18 A[0m
+[0;32mI (20884) MAIN: RMS Current: 0.18 A[0m
+[0;32mI (21444) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (22004) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (22564) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (23124) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (23684) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (24244) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (24804) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (25364) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (25924) MAIN: RMS Current: 0.20 A[0m
+[0;32mI (26484) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (27044) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (27604) MAIN: RMS Current: 0.18 A[0m
+[0;32mI (28164) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (28724) MAIN: RMS Current: 0.18 A[0m
+[0;32mI (29284) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (29844) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (30404) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (30964) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (31524) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (32084) MAIN: RMS Current: 0.18 A[0m
+[0;32mI (32644) MAIN: RMS Current: 0.20 A[0m
+[0;32mI (33204) MAIN: RMS Current: 19.33 A[0m
+[0;32mI (33764) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (34324) MAIN: RMS Current: 0.19 A[0m
+[0;32mI (34884) MAIN: RMS Current: 0.16 A[0m
+[0;32mI (35444) MAIN: RMS Current: 0.17 A[0m
+[0;32mI (36004) MAIN: RMS Current: 0.16 A[0m
+[0;32mI (36564) MAIN: RMS Current: 0.16 A[0m
+[0;32mI (37124) MAIN: RMS Current: 0.13 A[0m
+[0;32mI (37684) MAIN: RMS Current: 22.66 A[0m
+[0;32mI (38244) MAIN: RMS Current: 18.71 A[0m
+[0;32mI (38804) MAIN: RMS Current: 18.81 A[0m
+[0;32mI (39364) MAIN: RMS Current: 21.75 A[0m
+[0;32mI (39924) MAIN: RMS Current: 22.03 A[0m
+[0;32mI (40424) MAIN: Relay ON[0m
+[0;32mI (40484) MAIN: RMS Current: 5.66 A[0m
+[0;32mI (41044) MAIN: RMS Current: 3.92 A[0m
+[0;32mI (41604) MAIN: RMS Current: 3.77 A[0m
+[0;32mI (42164) MAIN: RMS Current: 0.17 A[0m
+[0;32mI (42724) MAIN: RMS Current: 0.16 A[0m
+[0;32mI (43284) MAIN: RMS Current: 0.17 A[0m
+[0;32mI (43844) MAIN: RMS Current: 0.15 A[0m
+[0;32mI (44404) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (44964) MAIN: RMS Current: 0.13 A[0m
+[0;32mI (45524) MAIN: RMS Current: 0.13 A[0m
+[0;32mI (46084) MAIN: RMS Current: 0.13 A[0m
+[0;32mI (46644) MAIN: RMS Current: 0.13 A[0m
+[0;32mI (47204) MAIN: RMS Current: 0.13 A[0m
+[0;32mI (47764) MAIN: RMS Current: 0.13 A[0m
+[0;32mI (48324) MAIN: RMS Current: 0.13 A[0m
+[0;32mI (48884) MAIN: RMS Current: 0.13 A[0m
+[0;32mI (49444) MAIN: RMS Current: 0.13 A[0m
+[0;32mI (50004) MAIN: RMS Current: 0.13 A[0m
+[0;32mI (50564) MAIN: RMS Current: 0.13 A[0m
+[0;32mI (51124) MAIN: RMS Current: 0.13 A[0m
+[0;32mI (51684) MAIN: RMS Current: 0.13 A[0m
+[0;32mI (52244) MAIN: RMS Current: 0.13 A[0m
+[0;32mI (52804) MAIN: RMS Current: 0.13 A[0m
+[0;32mI (53364) MAIN: RMS Current: 0.13 A[0m
+[0;32mI (53924) MAIN: RMS Current: 0.12 A[0m
+[0;32mI (54484) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (55044) MAIN: RMS Current: 0.13 A[0m
+[0;32mI (55604) MAIN: RMS Current: 0.13 A[0m
+[0;32mI (56164) MAIN: RMS Current: 0.13 A[0m
+[0;32mI (56724) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (57284) MAIN: RMS Current: 0.13 A[0m
+[0;32mI (57844) MAIN: RMS Current: 0.13 A[0m
+[0;32mI (58404) MAIN: RMS Current: 0.13 A[0m
+[0;32mI (58964) MAIN: RMS Current: 0.13 A[0m
+[0;32mI (59524) MAIN: RMS Current: 0.13 A[0m
+[0;32mI (60084) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (60644) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (61204) MAIN: RMS Current: 0.13 A[0m
+[0;32mI (61764) MAIN: RMS Current: 0.13 A[0m
+[0;32mI (62324) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (62884) MAIN: RMS Current: 0.13 A[0m
+[0;32mI (63444) MAIN: RMS Current: 0.13 A[0m
+[0;32mI (64004) MAIN: RMS Current: 0.13 A[0m
+[0;32mI (64564) MAIN: RMS Current: 0.13 A[0m
+[0;32mI (65124) MAIN: RMS Current: 0.13 A[0m
+[0;32mI (65684) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (66244) MAIN: RMS Current: 0.13 A[0m
+[0;32mI (66804) MAIN: RMS Current: 0.13 A[0m
+[0;32mI (67364) MAIN: RMS Current: 0.13 A[0m
+[0;32mI (67924) MAIN: RMS Current: 0.13 A[0m
+[0;32mI (68484) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (69044) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (69604) MAIN: RMS Current: 0.13 A[0m
+[0;32mI (70164) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (70724) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (71284) MAIN: RMS Current: 0.13 A[0m
+[0;32mI (71844) MAIN: RMS Current: 0.13 A[0m
+[0;32mI (72404) MAIN: RMS Current: 0.13 A[0m
+[0;32mI (72964) MAIN: RMS Current: 0.13 A[0m
+[0;32mI (73524) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (74084) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (74644) MAIN: RMS Current: 0.13 A[0m
+[0;32mI (75204) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (75764) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (76324) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (76884) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (77444) MAIN: RMS Current: 0.13 A[0m
+[0;32mI (78004) MAIN: RMS Current: 0.13 A[0m
+[0;32mI (78564) MAIN: RMS Current: 0.13 A[0m
+[0;32mI (79124) MAIN: RMS Current: 0.13 A[0m
+[0;32mI (79684) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (80244) MAIN: RMS Current: 0.13 A[0m
+[0;32mI (80804) MAIN: RMS Current: 0.13 A[0m
+[0;32mI (81364) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (81924) MAIN: RMS Current: 0.13 A[0m
+[0;32mI (82484) MAIN: RMS Current: 0.13 A[0m
+[0;32mI (83044) MAIN: RMS Current: 0.13 A[0m
+[0;32mI (83604) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (84164) MAIN: RMS Current: 0.13 A[0m
+[0;32mI (84724) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (85284) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (85844) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (86404) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (86964) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (87524) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (88084) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (88644) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (89204) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (89764) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (90324) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (90884) MAIN: RMS Current: 0.13 A[0m
+[0;32mI (91444) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (92004) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (92564) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (93124) MAIN: RMS Current: 0.13 A[0m
+[0;32mI (93684) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (94244) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (94804) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (95364) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (95924) MAIN: RMS Current: 0.13 A[0m
+[0;32mI (96484) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (97044) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (97604) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (98164) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (98724) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (99284) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (99844) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (100404) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (100964) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (101524) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (102084) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (102644) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (103204) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (103764) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (104324) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (104884) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (105444) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (106004) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (106564) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (107124) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (107684) MAIN: RMS Current: 0.13 A[0m
+[0;32mI (108244) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (108804) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (109364) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (109924) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (110484) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (111044) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (111604) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (112164) MAIN: RMS Current: 0.13 A[0m
+[0;32mI (112724) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (113284) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (113844) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (114404) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (114964) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (115524) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (116084) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (116644) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (117204) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (117764) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (118324) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (118884) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (119444) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (120004) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (120564) MAIN: RMS Current: 0.13 A[0m
+[0;32mI (121124) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (121684) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (122244) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (122804) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (123364) MAIN: RMS Current: 0.13 A[0m
+[0;32mI (123924) MAIN: RMS Current: 0.13 A[0m
+[0;32mI (124484) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (125044) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (125604) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (126164) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (126724) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (127284) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (127844) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (128404) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (128964) MAIN: RMS Current: 0.15 A[0m
+[0;32mI (129524) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (130084) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (130644) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (131204) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (131764) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (132324) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (132884) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (133444) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (134004) MAIN: RMS Current: 0.13 A[0m
+[0;32mI (134564) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (135124) MAIN: RMS Current: 0.13 A[0m
+[0;32mI (135684) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (136244) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (136804) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (137364) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (137924) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (138484) MAIN: RMS Current: 0.13 A[0m
+[0;32mI (139044) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (139604) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (140164) MAIN: RMS Current: 0.13 A[0m
+[0;32mI (140724) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (141284) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (141844) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (142404) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (142964) MAIN: RMS Current: 0.13 A[0m
+[0;32mI (143524) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (144084) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (144644) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (145204) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (145764) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (146324) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (146884) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (147444) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (148004) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (148564) MAIN: RMS Current: 0.13 A[0m
+[0;32mI (149124) MAIN: RMS Current: 0.13 A[0m
+[0;32mI (149684) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (150244) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (150804) MAIN: RMS Current: 0.13 A[0m
+[0;32mI (151364) MAIN: RMS Current: 0.13 A[0m
+[0;32mI (151924) MAIN: RMS Current: 0.14 A[0m
+[0;32mI (152484) MAIN: RMS Current: 0.13 A[0m
+[0;32mI (153044) MAIN: RMS Current: 0.13 A[0m
+[0;32mI (153604) MAIN: RMS Current: 0.13 A[0m
+[0;32mI (154164) MAIN: RMS Current: 0.13 A[0m
+[0;32mI (154724) MAIN: RMS Current: 0.13 A[0m

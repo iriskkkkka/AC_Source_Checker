@@ -1,0 +1,2 @@
+source /home/iriska/ssd/transformer/build/bootloader/gdbinit/symbols
+source /home/iriska/ssd/transformer/build/bootloader/gdbinit/connect
