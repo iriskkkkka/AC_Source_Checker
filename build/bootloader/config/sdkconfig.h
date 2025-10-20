@@ -1,6 +1,6 @@
 /*
  * Automatically generated file. DO NOT EDIT.
- * Espressif IoT Development Framework (ESP-IDF) 6.0.0 Configuration Header
+ * Espressif IoT Development Framework (ESP-IDF) 5.5.0 Configuration Header
  */
 #pragma once
 #define CONFIG_SOC_CAPS_ECO_VER_MAX 301
@@ -235,7 +235,6 @@
 #define CONFIG_SOC_CLK_LP_FAST_SUPPORT_XTAL_D4 1
 #define CONFIG_SOC_SDMMC_USE_IOMUX 1
 #define CONFIG_SOC_SDMMC_NUM_SLOTS 2
-#define CONFIG_SOC_SDMMC_DATA_WIDTH_MAX 8
 #define CONFIG_SOC_WIFI_WAPI_SUPPORT 1
 #define CONFIG_SOC_WIFI_CSI_SUPPORT 1
 #define CONFIG_SOC_WIFI_MESH_SUPPORT 1

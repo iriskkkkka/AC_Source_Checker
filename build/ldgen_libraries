@@ -43,7 +43,6 @@
 /home/iriska/ssd/transformer/build/esp-idf/esp_driver_mcpwm/libesp_driver_mcpwm.a
 /home/iriska/ssd/transformer/build/esp-idf/esp_driver_i2s/libesp_driver_i2s.a
 /home/iriska/ssd/transformer/build/esp-idf/esp_driver_sdmmc/libesp_driver_sdmmc.a
-/home/iriska/ssd/transformer/build/esp-idf/esp_driver_sd_intf/libesp_driver_sd_intf.a
 /home/iriska/ssd/transformer/build/esp-idf/sdmmc/libsdmmc.a
 /home/iriska/ssd/transformer/build/esp-idf/esp_driver_sdspi/libesp_driver_sdspi.a
 /home/iriska/ssd/transformer/build/esp-idf/esp_driver_sdio/libesp_driver_sdio.a
@@ -116,7 +115,6 @@
 /home/iriska/ssd/transformer/build/esp-idf/esp_driver_mcpwm/libesp_driver_mcpwm.a
 /home/iriska/ssd/transformer/build/esp-idf/esp_driver_i2s/libesp_driver_i2s.a
 /home/iriska/ssd/transformer/build/esp-idf/sdmmc/libsdmmc.a
-/home/iriska/ssd/transformer/build/esp-idf/esp_driver_sd_intf/libesp_driver_sd_intf.a
 /home/iriska/ssd/transformer/build/esp-idf/esp_driver_sdmmc/libesp_driver_sdmmc.a
 /home/iriska/ssd/transformer/build/esp-idf/esp_driver_sdspi/libesp_driver_sdspi.a
 /home/iriska/ssd/transformer/build/esp-idf/esp_driver_sdio/libesp_driver_sdio.a

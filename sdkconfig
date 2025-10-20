@@ -1,6 +1,6 @@
 #
 # Automatically generated file. DO NOT EDIT.
-# Espressif IoT Development Framework (ESP-IDF) 6.0.0 Project Configuration
+# Espressif IoT Development Framework (ESP-IDF) 5.5.0 Project Configuration
 #
 CONFIG_SOC_CAPS_ECO_VER_MAX=301
 CONFIG_SOC_ADC_SUPPORTED=y
@@ -234,7 +234,6 @@ CONFIG_SOC_CLK_XTAL32K_SUPPORTED=y
 CONFIG_SOC_CLK_LP_FAST_SUPPORT_XTAL_D4=y
 CONFIG_SOC_SDMMC_USE_IOMUX=y
 CONFIG_SOC_SDMMC_NUM_SLOTS=2
-CONFIG_SOC_SDMMC_DATA_WIDTH_MAX=8
 CONFIG_SOC_WIFI_WAPI_SUPPORT=y
 CONFIG_SOC_WIFI_CSI_SUPPORT=y
 CONFIG_SOC_WIFI_MESH_SUPPORT=y
@@ -737,12 +736,6 @@ CONFIG_RMT_OBJ_CACHE_SAFE=y
 # CONFIG_SDM_CTRL_FUNC_IN_IRAM is not set
 # CONFIG_SDM_ENABLE_DEBUG_LOG is not set
 # end of ESP-Driver:Sigma Delta Modulator Configurations
-
-#
-# ESP-Driver: SD Host SDMMC Controller Configurations
-#
-# CONFIG_SD_HOST_SDMMC_ISR_CACHE_SAFE is not set
-# end of ESP-Driver: SD Host SDMMC Controller Configurations
 
 #
 # ESP-Driver:SPI Configurations

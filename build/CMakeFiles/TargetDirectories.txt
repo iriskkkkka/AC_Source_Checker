@@ -514,13 +514,6 @@
 /home/iriska/ssd/transformer/build/esp-idf/sdmmc/CMakeFiles/install.dir
 /home/iriska/ssd/transformer/build/esp-idf/sdmmc/CMakeFiles/install/local.dir
 /home/iriska/ssd/transformer/build/esp-idf/sdmmc/CMakeFiles/install/strip.dir
-/home/iriska/ssd/transformer/build/esp-idf/esp_driver_sd_intf/CMakeFiles/__idf_esp_driver_sd_intf.dir
-/home/iriska/ssd/transformer/build/esp-idf/esp_driver_sd_intf/CMakeFiles/edit_cache.dir
-/home/iriska/ssd/transformer/build/esp-idf/esp_driver_sd_intf/CMakeFiles/rebuild_cache.dir
-/home/iriska/ssd/transformer/build/esp-idf/esp_driver_sd_intf/CMakeFiles/list_install_components.dir
-/home/iriska/ssd/transformer/build/esp-idf/esp_driver_sd_intf/CMakeFiles/install.dir
-/home/iriska/ssd/transformer/build/esp-idf/esp_driver_sd_intf/CMakeFiles/install/local.dir
-/home/iriska/ssd/transformer/build/esp-idf/esp_driver_sd_intf/CMakeFiles/install/strip.dir
 /home/iriska/ssd/transformer/build/esp-idf/esp_driver_sdmmc/CMakeFiles/__idf_esp_driver_sdmmc.dir
 /home/iriska/ssd/transformer/build/esp-idf/esp_driver_sdmmc/CMakeFiles/edit_cache.dir
 /home/iriska/ssd/transformer/build/esp-idf/esp_driver_sdmmc/CMakeFiles/rebuild_cache.dir

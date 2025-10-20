@@ -1,0 +1,1768 @@
+Command: /home/iriska/.espressif/python_env/idf5.5_py3.13_env/bin/python /home/iriska/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/iriska/ssd/transformer/build/esp32_ampermeter_display.elf /home/iriska/ssd/transformer/build/bootloader/bootloader.elf -m '/home/iriska/.espressif/python_env/idf5.5_py3.13_env/bin/python' '/home/iriska/esp-idf/tools/idf.py'
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 19 2025 23:17:59[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v1.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (36) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (48) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (70) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b3fch ( 46076) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001b424 vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (103) esp_image: segment 2: paddr=0001b44c vaddr=3ffb0000 size=023e8h (  9192) load[0m
+[0;32mI (110) esp_image: segment 3: paddr=0001d83c vaddr=40080000 size=027dch ( 10204) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=19cdch (105692) map[0m
+[0;32mI (158) esp_image: segment 5: paddr=00039d04 vaddr=400827dc size=0b830h ( 47152) load[0m
+[0;32mI (184) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (184) boot: Disabling RNG early entropy source...[0m
+[0;32mI (194) cpu_start: Multicore app[0m
+[0;32mI (202) cpu_start: Pro cpu start user code[0m
+[0;32mI (203) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (203) app_init: Application information:[0m
+[0;32mI (203) app_init: Project name:     esp32_ampermeter_display[0m
+[0;32mI (208) app_init: App version:      fc86329-dirty[0m
+[0;32mI (212) app_init: Compile time:     Oct 19 2025 23:17:55[0m
+[0;32mI (217) app_init: ELF file SHA256:  0b6bd0e9b...[0m
+[0;32mI (222) app_init: ESP-IDF:          v5.5[0m
+[0;32mI (225) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (229) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (233) efuse_init: Chip rev:         v1.1[0m
+[0;32mI (237) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (244) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (249) heap_init: At 3FFB2CB8 len 0002D348 (180 KiB): DRAM[0m
+[0;32mI (254) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (259) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (265) heap_init: At 4008E00C len 00011FF4 (71 KiB): IRAM[0m
+[0;32mI (271) spi_flash: detected chip: generic[0m
+[0;32mI (274) spi_flash: flash io: dio[0m
+[0;33mW (277) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (289) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (297) main_task: Started on CPU0[0m
+[0;32mI (307) main_task: Calling app_main()[0m
+[0;32mI (307) TANG_NANO: Starting SIMPLE TEST[0m
+[0;32mI (307) TANG_NANO: Relay initialized on GPIO25[0m
+[0;32mI (307) TANG_NANO: UART initialized: TX=GPIO17, RX=GPIO16, Baud=115200[0m
+[0;32mI (317) TANG_NANO: Sent: I:0.0A[0m
+
+[0;32mI (317) TANG_NANO: Relay: ON[0m
+[0;32mI (1317) TANG_NANO: Sent: I:0.1A[0m
+
+[0;32mI (1317) TANG_NANO: Relay: ON[0m
+[0;32mI (2317) TANG_NANO: Sent: I:0.2A[0m
+
+[0;32mI (2317) TANG_NANO: Relay: ON[0m
+[0;32mI (3317) TANG_NANO: Sent: I:0.3A[0m
+
+[0;32mI (3317) TANG_NANO: Relay: ON[0m
+[0;32mI (4317) TANG_NANO: Sent: I:0.4A[0m
+
+[0;32mI (4317) TANG_NANO: Relay: ON[0m
+[0;32mI (5317) TANG_NANO: Sent: I:0.5A[0m
+
+[0;32mI (5317) TANG_NANO: Relay: OFF[0m
+[0;32mI (6317) TANG_NANO: Sent: I:0.6A[0m
+
+[0;32mI (6317) TANG_NANO: Relay: OFF[0m
+[0;32mI (7317) TANG_NANO: Sent: I:0.7A[0m
+
+[0;32mI (7317) TANG_NANO: Relay: OFF[0m
+[0;32mI (8317) TANG_NANO: Sent: I:0.8A[0m
+
+[0;32mI (8317) TANG_NANO: Relay: OFF[0m
+[0;32mI (9317) TANG_NANO: Sent: I:0.9A[0m
+
+[0;32mI (9317) TANG_NANO: Relay: OFF[0m
+[0;32mI (10317) TANG_NANO: Sent: I:1.0A[0m
+
+[0;32mI (10317) TANG_NANO: Relay: ON[0m
+[0;32mI (11317) TANG_NANO: Sent: I:1.1A[0m
+
+[0;32mI (11317) TANG_NANO: Relay: ON[0m
+[0;32mI (12317) TANG_NANO: Sent: I:1.2A[0m
+
+[0;32mI (12317) TANG_NANO: Relay: ON[0m
+[0;32mI (13317) TANG_NANO: Sent: I:1.3A[0m
+
+[0;32mI (13317) TANG_NANO: Relay: ON[0m
+[0;32mI (14317) TANG_NANO: Sent: I:1.4A[0m
+
+[0;32mI (14317) TANG_NANO: Relay: ON[0m
+[0;32mI (15317) TANG_NANO: Sent: I:1.5A[0m
+
+[0;32mI (15317) TANG_NANO: Relay: OFF[0m
+[0;32mI (16317) TANG_NANO: Sent: I:1.6A[0m
+
+[0;32mI (16317) TANG_NANO: Relay: OFF[0m
+[0;32mI (17317) TANG_NANO: Sent: I:1.7A[0m
+
+[0;32mI (17317) TANG_NANO: Relay: OFF[0m
+[0;32mI (18317) TANG_NANO: Sent: I:1.8A[0m
+
+[0;32mI (18317) TANG_NANO: Relay: OFF[0m
+[0;32mI (19317) TANG_NANO: Sent: I:1.9A[0m
+
+[0;32mI (19317) TANG_NANO: Relay: OFF[0m
+[0;32mI (20317) TANG_NANO: Sent: I:2.0A[0m
+
+[0;32mI (20317) TANG_NANO: Relay: ON[0m
+[0;32mI (21317) TANG_NANO: Sent: I:2.1A[0m
+
+[0;32mI (21317) TANG_NANO: Relay: ON[0m
+[0;32mI (22317) TANG_NANO: Sent: I:2.2A[0m
+
+[0;32mI (22317) TANG_NANO: Relay: ON[0m
+[0;32mI (23317) TANG_NANO: Sent: I:2.3A[0m
+
+[0;32mI (23317) TANG_NANO: Relay: ON[0m
+[0;32mI (24317) TANG_NANO: Sent: I:2.4A[0m
+
+[0;32mI (24317) TANG_NANO: Relay: ON[0m
+[0;32mI (25317) TANG_NANO: Sent: I:2.5A[0m
+
+[0;32mI (25317) TANG_NANO: Relay: OFF[0m
+[0;32mI (26317) TANG_NANO: Sent: I:2.6A[0m
+
+[0;32mI (26317) TANG_NANO: Relay: OFF[0m
+[0;32mI (27317) TANG_NANO: Sent: I:2.7A[0m
+
+[0;32mI (27317) TANG_NANO: Relay: OFF[0m
+[0;32mI (28317) TANG_NANO: Sent: I:2.8A[0m
+
+[0;32mI (28317) TANG_NANO: Relay: OFF[0m
+[0;32mI (29317) TANG_NANO: Sent: I:2.9A[0m
+
+[0;32mI (29317) TANG_NANO: Relay: OFF[0m
+[0;32mI (30317) TANG_NANO: Sent: I:3.0A[0m
+
+[0;32mI (30317) TANG_NANO: Relay: ON[0m
+[0;32mI (31317) TANG_NANO: Sent: I:3.1A[0m
+
+[0;32mI (31317) TANG_NANO: Relay: ON[0m
+[0;32mI (32317) TANG_NANO: Sent: I:3.2A[0m
+
+[0;32mI (32317) TANG_NANO: Relay: ON[0m
+[0;32mI (33317) TANG_NANO: Sent: I:3.3A[0m
+
+[0;32mI (33317) TANG_NANO: Relay: ON[0m
+[0;32mI (34317) TANG_NANO: Sent: I:3.4A[0m
+
+[0;32mI (34317) TANG_NANO: Relay: ON[0m
+[0;32mI (35317) TANG_NANO: Sent: I:3.5A[0m
+
+[0;32mI (35317) TANG_NANO: Relay: OFF[0m
+[0;32mI (36317) TANG_NANO: Sent: I:3.6A[0m
+
+[0;32mI (36317) TANG_NANO: Relay: OFF[0m
+[0;32mI (37317) TANG_NANO: Sent: I:3.7A[0m
+
+[0;32mI (37317) TANG_NANO: Relay: OFF[0m
+[0;32mI (38317) TANG_NANO: Sent: I:3.8A[0m
+
+[0;32mI (38317) TANG_NANO: Relay: OFF[0m
+[0;32mI (39317) TANG_NANO: Sent: I:3.9A[0m
+
+[0;32mI (39317) TANG_NANO: Relay: OFF[0m
+[0;32mI (40317) TANG_NANO: Sent: I:4.0A[0m
+
+[0;32mI (40317) TANG_NANO: Relay: ON[0m
+[0;32mI (41317) TANG_NANO: Sent: I:4.1A[0m
+
+[0;32mI (41317) TANG_NANO: Relay: ON[0m
+[0;32mI (42317) TANG_NANO: Sent: I:4.2A[0m
+
+[0;32mI (42317) TANG_NANO: Relay: ON[0m
+[0;32mI (43317) TANG_NANO: Sent: I:4.3A[0m
+
+[0;32mI (43317) TANG_NANO: Relay: ON[0m
+[0;32mI (44317) TANG_NANO: Sent: I:4.4A[0m
+
+[0;32mI (44317) TANG_NANO: Relay: ON[0m
+[0;32mI (45317) TANG_NANO: Sent: I:4.5A[0m
+
+[0;32mI (45317) TANG_NANO: Relay: OFF[0m
+[0;32mI (46317) TANG_NANO: Sent: I:4.6A[0m
+
+[0;32mI (46317) TANG_NANO: Relay: OFF[0m
+[0;32mI (47317) TANG_NANO: Sent: I:4.7A[0m
+
+[0;32mI (47317) TANG_NANO: Relay: OFF[0m
+[0;32mI (48317) TANG_NANO: Sent: I:4.8A[0m
+
+[0;32mI (48317) TANG_NANO: Relay: OFF[0m
+[0;32mI (49317) TANG_NANO: Sent: I:4.9A[0m
+
+[0;32mI (49317) TANG_NANO: Relay: OFF[0m
+[0;32mI (50317) TANG_NANO: Sent: I:5.0A[0m
+
+[0;32mI (50317) TANG_NANO: Relay: ON[0m
+[0;32mI (51317) TANG_NANO: Sent: I:5.1A[0m
+
+[0;32mI (51317) TANG_NANO: Relay: ON[0m
+[0;32mI (52317) TANG_NANO: Sent: I:5.2A[0m
+
+[0;32mI (52317) TANG_NANO: Relay: ON[0m
+[0;32mI (53317) TANG_NANO: Sent: I:5.3A[0m
+
+[0;32mI (53317) TANG_NANO: Relay: ON[0m
+[0;32mI (54317) TANG_NANO: Sent: I:5.4A[0m
+
+[0;32mI (54317) TANG_NANO: Relay: ON[0m
+[0;32mI (55317) TANG_NANO: Sent: I:5.5A[0m
+
+[0;32mI (55317) TANG_NANO: Relay: OFF[0m
+[0;32mI (56317) TANG_NANO: Sent: I:5.6A[0m
+
+[0;32mI (56317) TANG_NANO: Relay: OFF[0m
+[0;32mI (57317) TANG_NANO: Sent: I:5.7A[0m
+
+[0;32mI (57317) TANG_NANO: Relay: OFF[0m
+[0;32mI (58317) TANG_NANO: Sent: I:5.8A[0m
+
+[0;32mI (58317) TANG_NANO: Relay: OFF[0m
+[0;32mI (59317) TANG_NANO: Sent: I:5.9A[0m
+
+[0;32mI (59317) TANG_NANO: Relay: OFF[0m
+[0;32mI (60317) TANG_NANO: Sent: I:6.0A[0m
+
+[0;32mI (60317) TANG_NANO: Relay: ON[0m
+[0;32mI (61317) TANG_NANO: Sent: I:6.1A[0m
+
+[0;32mI (61317) TANG_NANO: Relay: ON[0m
+[0;32mI (62317) TANG_NANO: Sent: I:6.2A[0m
+
+[0;32mI (62317) TANG_NANO: Relay: ON[0m
+[0;32mI (63317) TANG_NANO: Sent: I:6.3A[0m
+
+[0;32mI (63317) TANG_NANO: Relay: ON[0m
+[0;32mI (64317) TANG_NANO: Sent: I:6.4A[0m
+
+[0;32mI (64317) TANG_NANO: Relay: ON[0m
+[0;32mI (65317) TANG_NANO: Sent: I:6.5A[0m
+
+[0;32mI (65317) TANG_NANO: Relay: OFF[0m
+[0;32mI (66317) TANG_NANO: Sent: I:6.6A[0m
+
+[0;32mI (66317) TANG_NANO: Relay: OFF[0m
+[0;32mI (67317) TANG_NANO: Sent: I:6.7A[0m
+
+[0;32mI (67317) TANG_NANO: Relay: OFF[0m
+[0;32mI (68317) TANG_NANO: Sent: I:6.8A[0m
+
+[0;32mI (68317) TANG_NANO: Relay: OFF[0m
+[0;32mI (69317) TANG_NANO: Sent: I:6.9A[0m
+
+[0;32mI (69317) TANG_NANO: Relay: OFF[0m
+[0;32mI (70317) TANG_NANO: Sent: I:7.0A[0m
+
+[0;32mI (70317) TANG_NANO: Relay: ON[0m
+[0;32mI (71317) TANG_NANO: Sent: I:7.1A[0m
+
+[0;32mI (71317) TANG_NANO: Relay: ON[0m
+[0;32mI (72317) TANG_NANO: Sent: I:7.2A[0m
+
+[0;32mI (72317) TANG_NANO: Relay: ON[0m
+[0;32mI (73317) TANG_NANO: Sent: I:7.3A[0m
+
+[0;32mI (73317) TANG_NANO: Relay: ON[0m
+[0;32mI (74317) TANG_NANO: Sent: I:7.4A[0m
+
+[0;32mI (74317) TANG_NANO: Relay: ON[0m
+[0;32mI (75317) TANG_NANO: Sent: I:7.5A[0m
+
+[0;32mI (75317) TANG_NANO: Relay: OFF[0m
+[0;32mI (76317) TANG_NANO: Sent: I:7.6A[0m
+
+[0;32mI (76317) TANG_NANO: Relay: OFF[0m
+[0;32mI (77317) TANG_NANO: Sent: I:7.7A[0m
+
+[0;32mI (77317) TANG_NANO: Relay: OFF[0m
+[0;32mI (78317) TANG_NANO: Sent: I:7.8A[0m
+
+[0;32mI (78317) TANG_NANO: Relay: OFF[0m
+[0;32mI (79317) TANG_NANO: Sent: I:7.9A[0m
+
+[0;32mI (79317) TANG_NANO: Relay: OFF[0m
+[0;32mI (80317) TANG_NANO: Sent: I:8.0A[0m
+
+[0;32mI (80317) TANG_NANO: Relay: ON[0m
+[0;32mI (81317) TANG_NANO: Sent: I:8.1A[0m
+
+[0;32mI (81317) TANG_NANO: Relay: ON[0m
+[0;32mI (82317) TANG_NANO: Sent: I:8.2A[0m
+
+[0;32mI (82317) TANG_NANO: Relay: ON[0m
+[0;32mI (83317) TANG_NANO: Sent: I:8.3A[0m
+
+[0;32mI (83317) TANG_NANO: Relay: ON[0m
+[0;32mI (84317) TANG_NANO: Sent: I:8.4A[0m
+
+[0;32mI (84317) TANG_NANO: Relay: ON[0m
+[0;32mI (85317) TANG_NANO: Sent: I:8.5A[0m
+
+[0;32mI (85317) TANG_NANO: Relay: OFF[0m
+[0;32mI (86317) TANG_NANO: Sent: I:8.6A[0m
+
+[0;32mI (86317) TANG_NANO: Relay: OFF[0m
+[0;32mI (87317) TANG_NANO: Sent: I:8.7A[0m
+
+[0;32mI (87317) TANG_NANO: Relay: OFF[0m
+[0;32mI (88317) TANG_NANO: Sent: I:8.8A[0m
+
+[0;32mI (88317) TANG_NANO: Relay: OFF[0m
+[0;32mI (89317) TANG_NANO: Sent: I:8.9A[0m
+
+[0;32mI (89317) TANG_NANO: Relay: OFF[0m
+[0;32mI (90317) TANG_NANO: Sent: I:9.0A[0m
+
+[0;32mI (90317) TANG_NANO: Relay: ON[0m
+[0;32mI (91317) TANG_NANO: Sent: I:9.1A[0m
+
+[0;32mI (91317) TANG_NANO: Relay: ON[0m
+[0;32mI (92317) TANG_NANO: Sent: I:9.2A[0m
+
+[0;32mI (92317) TANG_NANO: Relay: ON[0m
+[0;32mI (93317) TANG_NANO: Sent: I:9.3A[0m
+
+[0;32mI (93317) TANG_NANO: Relay: ON[0m
+[0;32mI (94317) TANG_NANO: Sent: I:9.4A[0m
+
+[0;32mI (94317) TANG_NANO: Relay: ON[0m
+[0;32mI (95317) TANG_NANO: Sent: I:9.5A[0m
+
+[0;32mI (95317) TANG_NANO: Relay: OFF[0m
+[0;32mI (96317) TANG_NANO: Sent: I:9.6A[0m
+
+[0;32mI (96317) TANG_NANO: Relay: OFF[0m
+[0;32mI (97317) TANG_NANO: Sent: I:9.7A[0m
+
+[0;32mI (97317) TANG_NANO: Relay: OFF[0m
+[0;32mI (98317) TANG_NANO: Sent: I:9.8A[0m
+
+[0;32mI (98317) TANG_NANO: Relay: OFF[0m
+[0;32mI (99317) TANG_NANO: Sent: I:9.9A[0m
+
+[0;32mI (99317) TANG_NANO: Relay: OFF[0m
+[0;32mI (100317) TANG_NANO: Sent: I:0.0A[0m
+
+[0;32mI (100317) TANG_NANO: Relay: ON[0m
+[0;32mI (101317) TANG_NANO: Sent: I:0.1A[0m
+
+[0;32mI (101317) TANG_NANO: Relay: ON[0m
+[0;32mI (102317) TANG_NANO: Sent: I:0.2A[0m
+
+[0;32mI (102317) TANG_NANO: Relay: ON[0m
+[0;32mI (103317) TANG_NANO: Sent: I:0.3A[0m
+
+[0;32mI (103317) TANG_NANO: Relay: ON[0m
+[0;32mI (104317) TANG_NANO: Sent: I:0.4A[0m
+
+[0;32mI (104317) TANG_NANO: Relay: ON[0m
+[0;32mI (105317) TANG_NANO: Sent: I:0.5A[0m
+
+[0;32mI (105317) TANG_NANO: Relay: OFF[0m
+[0;32mI (106317) TANG_NANO: Sent: I:0.6A[0m
+
+[0;32mI (106317) TANG_NANO: Relay: OFF[0m
+[0;32mI (107317) TANG_NANO: Sent: I:0.7A[0m
+
+[0;32mI (107317) TANG_NANO: Relay: OFF[0m
+[0;32mI (108317) TANG_NANO: Sent: I:0.8A[0m
+
+[0;32mI (108317) TANG_NANO: Relay: OFF[0m
+[0;32mI (109317) TANG_NANO: Sent: I:0.9A[0m
+
+[0;32mI (109317) TANG_NANO: Relay: OFF[0m
+[0;32mI (110317) TANG_NANO: Sent: I:1.0A[0m
+
+[0;32mI (110317) TANG_NANO: Relay: ON[0m
+[0;32mI (111317) TANG_NANO: Sent: I:1.1A[0m
+
+[0;32mI (111317) TANG_NANO: Relay: ON[0m
+[0;32mI (112317) TANG_NANO: Sent: I:1.2A[0m
+
+[0;32mI (112317) TANG_NANO: Relay: ON[0m
+[0;32mI (113317) TANG_NANO: Sent: I:1.3A[0m
+
+[0;32mI (113317) TANG_NANO: Relay: ON[0m
+[0;32mI (114317) TANG_NANO: Sent: I:1.4A[0m
+
+[0;32mI (114317) TANG_NANO: Relay: ON[0m
+[0;32mI (115317) TANG_NANO: Sent: I:1.5A[0m
+
+[0;32mI (115317) TANG_NANO: Relay: OFF[0m
+[0;32mI (116317) TANG_NANO: Sent: I:1.6A[0m
+
+[0;32mI (116317) TANG_NANO: Relay: OFF[0m
+[0;32mI (117317) TANG_NANO: Sent: I:1.7A[0m
+
+[0;32mI (117317) TANG_NANO: Relay: OFF[0m
+[0;32mI (118317) TANG_NANO: Sent: I:1.8A[0m
+
+[0;32mI (118317) TANG_NANO: Relay: OFF[0m
+[0;32mI (119317) TANG_NANO: Sent: I:1.9A[0m
+
+[0;32mI (119317) TANG_NANO: Relay: OFF[0m
+[0;32mI (120317) TANG_NANO: Sent: I:2.0A[0m
+
+[0;32mI (120317) TANG_NANO: Relay: ON[0m
+[0;32mI (121317) TANG_NANO: Sent: I:2.1A[0m
+
+[0;32mI (121317) TANG_NANO: Relay: ON[0m
+[0;32mI (122317) TANG_NANO: Sent: I:2.2A[0m
+
+[0;32mI (122317) TANG_NANO: Relay: ON[0m
+[0;32mI (123317) TANG_NANO: Sent: I:2.3A[0m
+
+[0;32mI (123317) TANG_NANO: Relay: ON[0m
+[0;32mI (124317) TANG_NANO: Sent: I:2.4A[0m
+
+[0;32mI (124317) TANG_NANO: Relay: ON[0m
+[0;32mI (125317) TANG_NANO: Sent: I:2.5A[0m
+
+[0;32mI (125317) TANG_NANO: Relay: OFF[0m
+[0;32mI (126317) TANG_NANO: Sent: I:2.6A[0m
+
+[0;32mI (126317) TANG_NANO: Relay: OFF[0m
+[0;32mI (127317) TANG_NANO: Sent: I:2.7A[0m
+
+[0;32mI (127317) TANG_NANO: Relay: OFF[0m
+[0;32mI (128317) TANG_NANO: Sent: I:2.8A[0m
+
+[0;32mI (128317) TANG_NANO: Relay: OFF[0m
+[0;32mI (129317) TANG_NANO: Sent: I:2.9A[0m
+
+[0;32mI (129317) TANG_NANO: Relay: OFF[0m
+[0;32mI (130317) TANG_NANO: Sent: I:3.0A[0m
+
+[0;32mI (130317) TANG_NANO: Relay: ON[0m
+[0;32mI (131317) TANG_NANO: Sent: I:3.1A[0m
+
+[0;32mI (131317) TANG_NANO: Relay: ON[0m
+[0;32mI (132317) TANG_NANO: Sent: I:3.2A[0m
+
+[0;32mI (132317) TANG_NANO: Relay: ON[0m
+[0;32mI (133317) TANG_NANO: Sent: I:3.3A[0m
+
+[0;32mI (133317) TANG_NANO: Relay: ON[0m
+[0;32mI (134317) TANG_NANO: Sent: I:3.4A[0m
+
+[0;32mI (134317) TANG_NANO: Relay: ON[0m
+[0;32mI (135317) TANG_NANO: Sent: I:3.5A[0m
+
+[0;32mI (135317) TANG_NANO: Relay: OFF[0m
+[0;32mI (136317) TANG_NANO: Sent: I:3.6A[0m
+
+[0;32mI (136317) TANG_NANO: Relay: OFF[0m
+[0;32mI (137317) TANG_NANO: Sent: I:3.7A[0m
+
+[0;32mI (137317) TANG_NANO: Relay: OFF[0m
+[0;32mI (138317) TANG_NANO: Sent: I:3.8A[0m
+
+[0;32mI (138317) TANG_NANO: Relay: OFF[0m
+[0;32mI (139317) TANG_NANO: Sent: I:3.9A[0m
+
+[0;32mI (139317) TANG_NANO: Relay: OFF[0m
+[0;32mI (140317) TANG_NANO: Sent: I:4.0A[0m
+
+[0;32mI (140317) TANG_NANO: Relay: ON[0m
+[0;32mI (141317) TANG_NANO: Sent: I:4.1A[0m
+
+[0;32mI (141317) TANG_NANO: Relay: ON[0m
+[0;32mI (142317) TANG_NANO: Sent: I:4.2A[0m
+
+[0;32mI (142317) TANG_NANO: Relay: ON[0m
+[0;32mI (143317) TANG_NANO: Sent: I:4.3A[0m
+
+[0;32mI (143317) TANG_NANO: Relay: ON[0m
+[0;32mI (144317) TANG_NANO: Sent: I:4.4A[0m
+
+[0;32mI (144317) TANG_NANO: Relay: ON[0m
+[0;32mI (145317) TANG_NANO: Sent: I:4.5A[0m
+
+[0;32mI (145317) TANG_NANO: Relay: OFF[0m
+[0;32mI (146317) TANG_NANO: Sent: I:4.6A[0m
+
+[0;32mI (146317) TANG_NANO: Relay: OFF[0m
+[0;32mI (147317) TANG_NANO: Sent: I:4.7A[0m
+
+[0;32mI (147317) TANG_NANO: Relay: OFF[0m
+[0;32mI (148317) TANG_NANO: Sent: I:4.8A[0m
+
+[0;32mI (148317) TANG_NANO: Relay: OFF[0m
+[0;32mI (149317) TANG_NANO: Sent: I:4.9A[0m
+
+[0;32mI (149317) TANG_NANO: Relay: OFF[0m
+[0;32mI (150317) TANG_NANO: Sent: I:5.0A[0m
+
+[0;32mI (150317) TANG_NANO: Relay: ON[0m
+[0;32mI (151317) TANG_NANO: Sent: I:5.1A[0m
+
+[0;32mI (151317) TANG_NANO: Relay: ON[0m
+[0;32mI (152317) TANG_NANO: Sent: I:5.2A[0m
+
+[0;32mI (152317) TANG_NANO: Relay: ON[0m
+[0;32mI (153317) TANG_NANO: Sent: I:5.3A[0m
+
+[0;32mI (153317) TANG_NANO: Relay: ON[0m
+[0;32mI (154317) TANG_NANO: Sent: I:5.4A[0m
+
+[0;32mI (154317) TANG_NANO: Relay: ON[0m
+[0;32mI (155317) TANG_NANO: Sent: I:5.5A[0m
+
+[0;32mI (155317) TANG_NANO: Relay: OFF[0m
+[0;32mI (156317) TANG_NANO: Sent: I:5.6A[0m
+
+[0;32mI (156317) TANG_NANO: Relay: OFF[0m
+[0;32mI (157317) TANG_NANO: Sent: I:5.7A[0m
+
+[0;32mI (157317) TANG_NANO: Relay: OFF[0m
+[0;32mI (158317) TANG_NANO: Sent: I:5.8A[0m
+
+[0;32mI (158317) TANG_NANO: Relay: OFF[0m
+[0;32mI (159317) TANG_NANO: Sent: I:5.9A[0m
+
+[0;32mI (159317) TANG_NANO: Relay: OFF[0m
+[0;32mI (160317) TANG_NANO: Sent: I:6.0A[0m
+
+[0;32mI (160317) TANG_NANO: Relay: ON[0m
+[0;32mI (161317) TANG_NANO: Sent: I:6.1A[0m
+
+[0;32mI (161317) TANG_NANO: Relay: ON[0m
+[0;32mI (162317) TANG_NANO: Sent: I:6.2A[0m
+
+[0;32mI (162317) TANG_NANO: Relay: ON[0m
+[0;32mI (163317) TANG_NANO: Sent: I:6.3A[0m
+
+[0;32mI (163317) TANG_NANO: Relay: ON[0m
+[0;32mI (164317) TANG_NANO: Sent: I:6.4A[0m
+
+[0;32mI (164317) TANG_NANO: Relay: ON[0m
+[0;32mI (165317) TANG_NANO: Sent: I:6.5A[0m
+
+[0;32mI (165317) TANG_NANO: Relay: OFF[0m
+[0;32mI (166317) TANG_NANO: Sent: I:6.6A[0m
+
+[0;32mI (166317) TANG_NANO: Relay: OFF[0m
+[0;32mI (167317) TANG_NANO: Sent: I:6.7A[0m
+
+[0;32mI (167317) TANG_NANO: Relay: OFF[0m
+[0;32mI (168317) TANG_NANO: Sent: I:6.8A[0m
+
+[0;32mI (168317) TANG_NANO: Relay: OFF[0m
+[0;32mI (169317) TANG_NANO: Sent: I:6.9A[0m
+
+[0;32mI (169317) TANG_NANO: Relay: OFF[0m
+[0;32mI (170317) TANG_NANO: Sent: I:7.0A[0m
+
+[0;32mI (170317) TANG_NANO: Relay: ON[0m
+[0;32mI (171317) TANG_NANO: Sent: I:7.1A[0m
+
+[0;32mI (171317) TANG_NANO: Relay: ON[0m
+[0;32mI (172317) TANG_NANO: Sent: I:7.2A[0m
+
+[0;32mI (172317) TANG_NANO: Relay: ON[0m
+[0;32mI (173317) TANG_NANO: Sent: I:7.3A[0m
+
+[0;32mI (173317) TANG_NANO: Relay: ON[0m
+[0;32mI (174317) TANG_NANO: Sent: I:7.4A[0m
+
+[0;32mI (174317) TANG_NANO: Relay: ON[0m
+[0;32mI (175317) TANG_NANO: Sent: I:7.5A[0m
+
+[0;32mI (175317) TANG_NANO: Relay: OFF[0m
+[0;32mI (176317) TANG_NANO: Sent: I:7.6A[0m
+
+[0;32mI (176317) TANG_NANO: Relay: OFF[0m
+[0;32mI (177317) TANG_NANO: Sent: I:7.7A[0m
+
+[0;32mI (177317) TANG_NANO: Relay: OFF[0m
+[0;32mI (178317) TANG_NANO: Sent: I:7.8A[0m
+
+[0;32mI (178317) TANG_NANO: Relay: OFF[0m
+[0;32mI (179317) TANG_NANO: Sent: I:7.9A[0m
+
+[0;32mI (179317) TANG_NANO: Relay: OFF[0m
+[0;32mI (180317) TANG_NANO: Sent: I:8.0A[0m
+
+[0;32mI (180317) TANG_NANO: Relay: ON[0m
+[0;32mI (181317) TANG_NANO: Sent: I:8.1A[0m
+
+[0;32mI (181317) TANG_NANO: Relay: ON[0m
+[0;32mI (182317) TANG_NANO: Sent: I:8.2A[0m
+
+[0;32mI (182317) TANG_NANO: Relay: ON[0m
+[0;32mI (183317) TANG_NANO: Sent: I:8.3A[0m
+
+[0;32mI (183317) TANG_NANO: Relay: ON[0m
+[0;32mI (184317) TANG_NANO: Sent: I:8.4A[0m
+
+[0;32mI (184317) TANG_NANO: Relay: ON[0m
+[0;32mI (185317) TANG_NANO: Sent: I:8.5A[0m
+
+[0;32mI (185317) TANG_NANO: Relay: OFF[0m
+[0;32mI (186317) TANG_NANO: Sent: I:8.6A[0m
+
+[0;32mI (186317) TANG_NANO: Relay: OFF[0m
+[0;32mI (187317) TANG_NANO: Sent: I:8.7A[0m
+
+[0;32mI (187317) TANG_NANO: Relay: OFF[0m
+[0;32mI (188317) TANG_NANO: Sent: I:8.8A[0m
+
+[0;32mI (188317) TANG_NANO: Relay: OFF[0m
+[0;32mI (189317) TANG_NANO: Sent: I:8.9A[0m
+
+[0;32mI (189317) TANG_NANO: Relay: OFF[0m
+[0;32mI (190317) TANG_NANO: Sent: I:9.0A[0m
+
+[0;32mI (190317) TANG_NANO: Relay: ON[0m
+[0;32mI (191317) TANG_NANO: Sent: I:9.1A[0m
+
+[0;32mI (191317) TANG_NANO: Relay: ON[0m
+[0;32mI (192317) TANG_NANO: Sent: I:9.2A[0m
+
+[0;32mI (192317) TANG_NANO: Relay: ON[0m
+[0;32mI (193317) TANG_NANO: Sent: I:9.3A[0m
+
+[0;32mI (193317) TANG_NANO: Relay: ON[0m
+[0;32mI (194317) TANG_NANO: Sent: I:9.4A[0m
+
+[0;32mI (194317) TANG_NANO: Relay: ON[0m
+[0;32mI (195317) TANG_NANO: Sent: I:9.5A[0m
+
+[0;32mI (195317) TANG_NANO: Relay: OFF[0m
+[0;32mI (196317) TANG_NANO: Sent: I:9.6A[0m
+
+[0;32mI (196317) TANG_NANO: Relay: OFF[0m
+[0;32mI (197317) TANG_NANO: Sent: I:9.7A[0m
+
+[0;32mI (197317) TANG_NANO: Relay: OFF[0m
+[0;32mI (198317) TANG_NANO: Sent: I:9.8A[0m
+
+[0;32mI (198317) TANG_NANO: Relay: OFF[0m
+[0;32mI (199317) TANG_NANO: Sent: I:9.9A[0m
+
+[0;32mI (199317) TANG_NANO: Relay: OFF[0m
+[0;32mI (200317) TANG_NANO: Sent: I:0.0A[0m
+
+[0;32mI (200317) TANG_NANO: Relay: ON[0m
+[0;32mI (201317) TANG_NANO: Sent: I:0.1A[0m
+
+[0;32mI (201317) TANG_NANO: Relay: ON[0m
+[0;32mI (202317) TANG_NANO: Sent: I:0.2A[0m
+
+[0;32mI (202317) TANG_NANO: Relay: ON[0m
+[0;32mI (203317) TANG_NANO: Sent: I:0.3A[0m
+
+[0;32mI (203317) TANG_NANO: Relay: ON[0m
+[0;32mI (204317) TANG_NANO: Sent: I:0.4A[0m
+
+[0;32mI (204317) TANG_NANO: Relay: ON[0m
+[0;32mI (205317) TANG_NANO: Sent: I:0.5A[0m
+
+[0;32mI (205317) TANG_NANO: Relay: OFF[0m
+[0;32mI (206317) TANG_NANO: Sent: I:0.6A[0m
+
+[0;32mI (206317) TANG_NANO: Relay: OFF[0m
+[0;32mI (207317) TANG_NANO: Sent: I:0.7A[0m
+
+[0;32mI (207317) TANG_NANO: Relay: OFF[0m
+[0;32mI (208317) TANG_NANO: Sent: I:0.8A[0m
+
+[0;32mI (208317) TANG_NANO: Relay: OFF[0m
+[0;32mI (209317) TANG_NANO: Sent: I:0.9A[0m
+
+[0;32mI (209317) TANG_NANO: Relay: OFF[0m
+[0;32mI (210317) TANG_NANO: Sent: I:1.0A[0m
+
+[0;32mI (210317) TANG_NANO: Relay: ON[0m
+[0;32mI (211317) TANG_NANO: Sent: I:1.1A[0m
+
+[0;32mI (211317) TANG_NANO: Relay: ON[0m
+[0;32mI (212317) TANG_NANO: Sent: I:1.2A[0m
+
+[0;32mI (212317) TANG_NANO: Relay: ON[0m
+[0;32mI (213317) TANG_NANO: Sent: I:1.3A[0m
+
+[0;32mI (213317) TANG_NANO: Relay: ON[0m
+[0;32mI (214317) TANG_NANO: Sent: I:1.4A[0m
+
+[0;32mI (214317) TANG_NANO: Relay: ON[0m
+[0;32mI (215317) TANG_NANO: Sent: I:1.5A[0m
+
+[0;32mI (215317) TANG_NANO: Relay: OFF[0m
+[0;32mI (216317) TANG_NANO: Sent: I:1.6A[0m
+
+[0;32mI (216317) TANG_NANO: Relay: OFF[0m
+[0;32mI (217317) TANG_NANO: Sent: I:1.7A[0m
+
+[0;32mI (217317) TANG_NANO: Relay: OFF[0m
+[0;32mI (218317) TANG_NANO: Sent: I:1.8A[0m
+
+[0;32mI (218317) TANG_NANO: Relay: OFF[0m
+[0;32mI (219317) TANG_NANO: Sent: I:1.9A[0m
+
+[0;32mI (219317) TANG_NANO: Relay: OFF[0m
+[0;32mI (220317) TANG_NANO: Sent: I:2.0A[0m
+
+[0;32mI (220317) TANG_NANO: Relay: ON[0m
+[0;32mI (221317) TANG_NANO: Sent: I:2.1A[0m
+
+[0;32mI (221317) TANG_NANO: Relay: ON[0m
+[0;32mI (222317) TANG_NANO: Sent: I:2.2A[0m
+
+[0;32mI (222317) TANG_NANO: Relay: ON[0m
+[0;32mI (223317) TANG_NANO: Sent: I:2.3A[0m
+
+[0;32mI (223317) TANG_NANO: Relay: ON[0m
+[0;32mI (224317) TANG_NANO: Sent: I:2.4A[0m
+
+[0;32mI (224317) TANG_NANO: Relay: ON[0m
+[0;32mI (225317) TANG_NANO: Sent: I:2.5A[0m
+
+[0;32mI (225317) TANG_NANO: Relay: OFF[0m
+[0;32mI (226317) TANG_NANO: Sent: I:2.6A[0m
+
+[0;32mI (226317) TANG_NANO: Relay: OFF[0m
+[0;32mI (227317) TANG_NANO: Sent: I:2.7A[0m
+
+[0;32mI (227317) TANG_NANO: Relay: OFF[0m
+[0;32mI (228317) TANG_NANO: Sent: I:2.8A[0m
+
+[0;32mI (228317) TANG_NANO: Relay: OFF[0m
+[0;32mI (229317) TANG_NANO: Sent: I:2.9A[0m
+
+[0;32mI (229317) TANG_NANO: Relay: OFF[0m
+[0;32mI (230317) TANG_NANO: Sent: I:3.0A[0m
+
+[0;32mI (230317) TANG_NANO: Relay: ON[0m
+[0;32mI (231317) TANG_NANO: Sent: I:3.1A[0m
+
+[0;32mI (231317) TANG_NANO: Relay: ON[0m
+[0;32mI (232317) TANG_NANO: Sent: I:3.2A[0m
+
+[0;32mI (232317) TANG_NANO: Relay: ON[0m
+[0;32mI (233317) TANG_NANO: Sent: I:3.3A[0m
+
+[0;32mI (233317) TANG_NANO: Relay: ON[0m
+[0;32mI (234317) TANG_NANO: Sent: I:3.4A[0m
+
+[0;32mI (234317) TANG_NANO: Relay: ON[0m
+[0;32mI (235317) TANG_NANO: Sent: I:3.5A[0m
+
+[0;32mI (235317) TANG_NANO: Relay: OFF[0m
+[0;32mI (236317) TANG_NANO: Sent: I:3.6A[0m
+
+[0;32mI (236317) TANG_NANO: Relay: OFF[0m
+[0;32mI (237317) TANG_NANO: Sent: I:3.7A[0m
+
+[0;32mI (237317) TANG_NANO: Relay: OFF[0m
+[0;32mI (238317) TANG_NANO: Sent: I:3.8A[0m
+
+[0;32mI (238317) TANG_NANO: Relay: OFF[0m
+[0;32mI (239317) TANG_NANO: Sent: I:3.9A[0m
+
+[0;32mI (239317) TANG_NANO: Relay: OFF[0m
+[0;32mI (240317) TANG_NANO: Sent: I:4.0A[0m
+
+[0;32mI (240317) TANG_NANO: Relay: ON[0m
+[0;32mI (241317) TANG_NANO: Sent: I:4.1A[0m
+
+[0;32mI (241317) TANG_NANO: Relay: ON[0m
+[0;32mI (242317) TANG_NANO: Sent: I:4.2A[0m
+
+[0;32mI (242317) TANG_NANO: Relay: ON[0m
+[0;32mI (243317) TANG_NANO: Sent: I:4.3A[0m
+
+[0;32mI (243317) TANG_NANO: Relay: ON[0m
+[0;32mI (244317) TANG_NANO: Sent: I:4.4A[0m
+
+[0;32mI (244317) TANG_NANO: Relay: ON[0m
+[0;32mI (245317) TANG_NANO: Sent: I:4.5A[0m
+
+[0;32mI (245317) TANG_NANO: Relay: OFF[0m
+[0;32mI (246317) TANG_NANO: Sent: I:4.6A[0m
+
+[0;32mI (246317) TANG_NANO: Relay: OFF[0m
+[0;32mI (247317) TANG_NANO: Sent: I:4.7A[0m
+
+[0;32mI (247317) TANG_NANO: Relay: OFF[0m
+[0;32mI (248317) TANG_NANO: Sent: I:4.8A[0m
+
+[0;32mI (248317) TANG_NANO: Relay: OFF[0m
+[0;32mI (249317) TANG_NANO: Sent: I:4.9A[0m
+
+[0;32mI (249317) TANG_NANO: Relay: OFF[0m
+[0;32mI (250317) TANG_NANO: Sent: I:5.0A[0m
+
+[0;32mI (250317) TANG_NANO: Relay: ON[0m
+[0;32mI (251317) TANG_NANO: Sent: I:5.1A[0m
+
+[0;32mI (251317) TANG_NANO: Relay: ON[0m
+[0;32mI (252317) TANG_NANO: Sent: I:5.2A[0m
+
+[0;32mI (252317) TANG_NANO: Relay: ON[0m
+[0;32mI (253317) TANG_NANO: Sent: I:5.3A[0m
+
+[0;32mI (253317) TANG_NANO: Relay: ON[0m
+[0;32mI (254317) TANG_NANO: Sent: I:5.4A[0m
+
+[0;32mI (254317) TANG_NANO: Relay: ON[0m
+[0;32mI (255317) TANG_NANO: Sent: I:5.5A[0m
+
+[0;32mI (255317) TANG_NANO: Relay: OFF[0m
+[0;32mI (256317) TANG_NANO: Sent: I:5.6A[0m
+
+[0;32mI (256317) TANG_NANO: Relay: OFF[0m
+[0;32mI (257317) TANG_NANO: Sent: I:5.7A[0m
+
+[0;32mI (257317) TANG_NANO: Relay: OFF[0m
+[0;32mI (258317) TANG_NANO: Sent: I:5.8A[0m
+
+[0;32mI (258317) TANG_NANO: Relay: OFF[0m
+[0;32mI (259317) TANG_NANO: Sent: I:5.9A[0m
+
+[0;32mI (259317) TANG_NANO: Relay: OFF[0m
+[0;32mI (260317) TANG_NANO: Sent: I:6.0A[0m
+
+[0;32mI (260317) TANG_NANO: Relay: ON[0m
+[0;32mI (261317) TANG_NANO: Sent: I:6.1A[0m
+
+[0;32mI (261317) TANG_NANO: Relay: ON[0m
+[0;32mI (262317) TANG_NANO: Sent: I:6.2A[0m
+
+[0;32mI (262317) TANG_NANO: Relay: ON[0m
+[0;32mI (263317) TANG_NANO: Sent: I:6.3A[0m
+
+[0;32mI (263317) TANG_NANO: Relay: ON[0m
+[0;32mI (264317) TANG_NANO: Sent: I:6.4A[0m
+
+[0;32mI (264317) TANG_NANO: Relay: ON[0m
+[0;32mI (265317) TANG_NANO: Sent: I:6.5A[0m
+
+[0;32mI (265317) TANG_NANO: Relay: OFF[0m
+[0;32mI (266317) TANG_NANO: Sent: I:6.6A[0m
+
+[0;32mI (266317) TANG_NANO: Relay: OFF[0m
+[0;32mI (267317) TANG_NANO: Sent: I:6.7A[0m
+
+[0;32mI (267317) TANG_NANO: Relay: OFF[0m
+[0;32mI (268317) TANG_NANO: Sent: I:6.8A[0m
+
+[0;32mI (268317) TANG_NANO: Relay: OFF[0m
+[0;32mI (269317) TANG_NANO: Sent: I:6.9A[0m
+
+[0;32mI (269317) TANG_NANO: Relay: OFF[0m
+[0;32mI (270317) TANG_NANO: Sent: I:7.0A[0m
+
+[0;32mI (270317) TANG_NANO: Relay: ON[0m
+[0;32mI (271317) TANG_NANO: Sent: I:7.1A[0m
+
+[0;32mI (271317) TANG_NANO: Relay: ON[0m
+[0;32mI (272317) TANG_NANO: Sent: I:7.2A[0m
+
+[0;32mI (272317) TANG_NANO: Relay: ON[0m
+[0;32mI (273317) TANG_NANO: Sent: I:7.3A[0m
+
+[0;32mI (273317) TANG_NANO: Relay: ON[0m
+[0;32mI (274317) TANG_NANO: Sent: I:7.4A[0m
+
+[0;32mI (274317) TANG_NANO: Relay: ON[0m
+[0;32mI (275317) TANG_NANO: Sent: I:7.5A[0m
+
+[0;32mI (275317) TANG_NANO: Relay: OFF[0m
+[0;32mI (276317) TANG_NANO: Sent: I:7.6A[0m
+
+[0;32mI (276317) TANG_NANO: Relay: OFF[0m
+[0;32mI (277317) TANG_NANO: Sent: I:7.7A[0m
+
+[0;32mI (277317) TANG_NANO: Relay: OFF[0m
+[0;32mI (278317) TANG_NANO: Sent: I:7.8A[0m
+
+[0;32mI (278317) TANG_NANO: Relay: OFF[0m
+[0;32mI (279317) TANG_NANO: Sent: I:7.9A[0m
+
+[0;32mI (279317) TANG_NANO: Relay: OFF[0m
+[0;32mI (280317) TANG_NANO: Sent: I:8.0A[0m
+
+[0;32mI (280317) TANG_NANO: Relay: ON[0m
+[0;32mI (281317) TANG_NANO: Sent: I:8.1A[0m
+
+[0;32mI (281317) TANG_NANO: Relay: ON[0m
+[0;32mI (282317) TANG_NANO: Sent: I:8.2A[0m
+
+[0;32mI (282317) TANG_NANO: Relay: ON[0m
+[0;32mI (283317) TANG_NANO: Sent: I:8.3A[0m
+
+[0;32mI (283317) TANG_NANO: Relay: ON[0m
+[0;32mI (284317) TANG_NANO: Sent: I:8.4A[0m
+
+[0;32mI (284317) TANG_NANO: Relay: ON[0m
+[0;32mI (285317) TANG_NANO: Sent: I:8.5A[0m
+
+[0;32mI (285317) TANG_NANO: Relay: OFF[0m
+[0;32mI (286317) TANG_NANO: Sent: I:8.6A[0m
+
+[0;32mI (286317) TANG_NANO: Relay: OFF[0m
+[0;32mI (287317) TANG_NANO: Sent: I:8.7A[0m
+
+[0;32mI (287317) TANG_NANO: Relay: OFF[0m
+[0;32mI (288317) TANG_NANO: Sent: I:8.8A[0m
+
+[0;32mI (288317) TANG_NANO: Relay: OFF[0m
+[0;32mI (289317) TANG_NANO: Sent: I:8.9A[0m
+
+[0;32mI (289317) TANG_NANO: Relay: OFF[0m
+[0;32mI (290317) TANG_NANO: Sent: I:9.0A[0m
+
+[0;32mI (290317) TANG_NANO: Relay: ON[0m
+[0;32mI (291317) TANG_NANO: Sent: I:9.1A[0m
+
+[0;32mI (291317) TANG_NANO: Relay: ON[0m
+[0;32mI (292317) TANG_NANO: Sent: I:9.2A[0m
+
+[0;32mI (292317) TANG_NANO: Relay: ON[0m
+[0;32mI (293317) TANG_NANO: Sent: I:9.3A[0m
+
+[0;32mI (293317) TANG_NANO: Relay: ON[0m
+[0;32mI (294317) TANG_NANO: Sent: I:9.4A[0m
+
+[0;32mI (294317) TANG_NANO: Relay: ON[0m
+[0;32mI (295317) TANG_NANO: Sent: I:9.5A[0m
+
+[0;32mI (295317) TANG_NANO: Relay: OFF[0m
+[0;32mI (296317) TANG_NANO: Sent: I:9.6A[0m
+
+[0;32mI (296317) TANG_NANO: Relay: OFF[0m
+[0;32mI (297317) TANG_NANO: Sent: I:9.7A[0m
+
+[0;32mI (297317) TANG_NANO: Relay: OFF[0m
+[0;32mI (298317) TANG_NANO: Sent: I:9.8A[0m
+
+[0;32mI (298317) TANG_NANO: Relay: OFF[0m
+[0;32mI (299317) TANG_NANO: Sent: I:9.9A[0m
+
+[0;32mI (299317) TANG_NANO: Relay: OFF[0m
+[0;32mI (300317) TANG_NANO: Sent: I:0.0A[0m
+
+[0;32mI (300317) TANG_NANO: Relay: ON[0m
+[0;32mI (301317) TANG_NANO: Sent: I:0.1A[0m
+
+[0;32mI (301317) TANG_NANO: Relay: ON[0m
+[0;32mI (302317) TANG_NANO: Sent: I:0.2A[0m
+
+[0;32mI (302317) TANG_NANO: Relay: ON[0m
+[0;32mI (303317) TANG_NANO: Sent: I:0.3A[0m
+
+[0;32mI (303317) TANG_NANO: Relay: ON[0m
+[0;32mI (304317) TANG_NANO: Sent: I:0.4A[0m
+
+[0;32mI (304317) TANG_NANO: Relay: ON[0m
+[0;32mI (305317) TANG_NANO: Sent: I:0.5A[0m
+
+[0;32mI (305317) TANG_NANO: Relay: OFF[0m
+[0;32mI (306317) TANG_NANO: Sent: I:0.6A[0m
+
+[0;32mI (306317) TANG_NANO: Relay: OFF[0m
+[0;32mI (307317) TANG_NANO: Sent: I:0.7A[0m
+
+[0;32mI (307317) TANG_NANO: Relay: OFF[0m
+[0;32mI (308317) TANG_NANO: Sent: I:0.8A[0m
+
+[0;32mI (308317) TANG_NANO: Relay: OFF[0m
+[0;32mI (309317) TANG_NANO: Sent: I:0.9A[0m
+
+[0;32mI (309317) TANG_NANO: Relay: OFF[0m
+[0;32mI (310317) TANG_NANO: Sent: I:1.0A[0m
+
+[0;32mI (310317) TANG_NANO: Relay: ON[0m
+[0;32mI (311317) TANG_NANO: Sent: I:1.1A[0m
+
+[0;32mI (311317) TANG_NANO: Relay: ON[0m
+[0;32mI (312317) TANG_NANO: Sent: I:1.2A[0m
+
+[0;32mI (312317) TANG_NANO: Relay: ON[0m
+[0;32mI (313317) TANG_NANO: Sent: I:1.3A[0m
+
+[0;32mI (313317) TANG_NANO: Relay: ON[0m
+[0;32mI (314317) TANG_NANO: Sent: I:1.4A[0m
+
+[0;32mI (314317) TANG_NANO: Relay: ON[0m
+[0;32mI (315317) TANG_NANO: Sent: I:1.5A[0m
+
+[0;32mI (315317) TANG_NANO: Relay: OFF[0m
+[0;32mI (316317) TANG_NANO: Sent: I:1.6A[0m
+
+[0;32mI (316317) TANG_NANO: Relay: OFF[0m
+[0;32mI (317317) TANG_NANO: Sent: I:1.7A[0m
+
+[0;32mI (317317) TANG_NANO: Relay: OFF[0m
+[0;32mI (318317) TANG_NANO: Sent: I:1.8A[0m
+
+[0;32mI (318317) TANG_NANO: Relay: OFF[0m
+[0;32mI (319317) TANG_NANO: Sent: I:1.9A[0m
+
+[0;32mI (319317) TANG_NANO: Relay: OFF[0m
+[0;32mI (320317) TANG_NANO: Sent: I:2.0A[0m
+
+[0;32mI (320317) TANG_NANO: Relay: ON[0m
+[0;32mI (321317) TANG_NANO: Sent: I:2.1A[0m
+
+[0;32mI (321317) TANG_NANO: Relay: ON[0m
+[0;32mI (322317) TANG_NANO: Sent: I:2.2A[0m
+
+[0;32mI (322317) TANG_NANO: Relay: ON[0m
+[0;32mI (323317) TANG_NANO: Sent: I:2.3A[0m
+
+[0;32mI (323317) TANG_NANO: Relay: ON[0m
+[0;32mI (324317) TANG_NANO: Sent: I:2.4A[0m
+
+[0;32mI (324317) TANG_NANO: Relay: ON[0m
+[0;32mI (325317) TANG_NANO: Sent: I:2.5A[0m
+
+[0;32mI (325317) TANG_NANO: Relay: OFF[0m
+[0;32mI (326317) TANG_NANO: Sent: I:2.6A[0m
+
+[0;32mI (326317) TANG_NANO: Relay: OFF[0m
+[0;32mI (327317) TANG_NANO: Sent: I:2.7A[0m
+
+[0;32mI (327317) TANG_NANO: Relay: OFF[0m
+[0;32mI (328317) TANG_NANO: Sent: I:2.8A[0m
+
+[0;32mI (328317) TANG_NANO: Relay: OFF[0m
+[0;32mI (329317) TANG_NANO: Sent: I:2.9A[0m
+
+[0;32mI (329317) TANG_NANO: Relay: OFF[0m
+[0;32mI (330317) TANG_NANO: Sent: I:3.0A[0m
+
+[0;32mI (330317) TANG_NANO: Relay: ON[0m
+[0;32mI (331317) TANG_NANO: Sent: I:3.1A[0m
+
+[0;32mI (331317) TANG_NANO: Relay: ON[0m
+[0;32mI (332317) TANG_NANO: Sent: I:3.2A[0m
+
+[0;32mI (332317) TANG_NANO: Relay: ON[0m
+[0;32mI (333317) TANG_NANO: Sent: I:3.3A[0m
+
+[0;32mI (333317) TANG_NANO: Relay: ON[0m
+[0;32mI (334317) TANG_NANO: Sent: I:3.4A[0m
+
+[0;32mI (334317) TANG_NANO: Relay: ON[0m
+[0;32mI (335317) TANG_NANO: Sent: I:3.5A[0m
+
+[0;32mI (335317) TANG_NANO: Relay: OFF[0m
+[0;32mI (336317) TANG_NANO: Sent: I:3.6A[0m
+
+[0;32mI (336317) TANG_NANO: Relay: OFF[0m
+[0;32mI (337317) TANG_NANO: Sent: I:3.7A[0m
+
+[0;32mI (337317) TANG_NANO: Relay: OFF[0m
+[0;32mI (338317) TANG_NANO: Sent: I:3.8A[0m
+
+[0;32mI (338317) TANG_NANO: Relay: OFF[0m
+[0;32mI (339317) TANG_NANO: Sent: I:3.9A[0m
+
+[0;32mI (339317) TANG_NANO: Relay: OFF[0m
+[0;32mI (340317) TANG_NANO: Sent: I:4.0A[0m
+
+[0;32mI (340317) TANG_NANO: Relay: ON[0m
+[0;32mI (341317) TANG_NANO: Sent: I:4.1A[0m
+
+[0;32mI (341317) TANG_NANO: Relay: ON[0m
+[0;32mI (342317) TANG_NANO: Sent: I:4.2A[0m
+
+[0;32mI (342317) TANG_NANO: Relay: ON[0m
+[0;32mI (343317) TANG_NANO: Sent: I:4.3A[0m
+
+[0;32mI (343317) TANG_NANO: Relay: ON[0m
+[0;32mI (344317) TANG_NANO: Sent: I:4.4A[0m
+
+[0;32mI (344317) TANG_NANO: Relay: ON[0m
+[0;32mI (345317) TANG_NANO: Sent: I:4.5A[0m
+
+[0;32mI (345317) TANG_NANO: Relay: OFF[0m
+[0;32mI (346317) TANG_NANO: Sent: I:4.6A[0m
+
+[0;32mI (346317) TANG_NANO: Relay: OFF[0m
+[0;32mI (347317) TANG_NANO: Sent: I:4.7A[0m
+
+[0;32mI (347317) TANG_NANO: Relay: OFF[0m
+[0;32mI (348317) TANG_NANO: Sent: I:4.8A[0m
+
+[0;32mI (348317) TANG_NANO: Relay: OFF[0m
+[0;32mI (349317) TANG_NANO: Sent: I:4.9A[0m
+
+[0;32mI (349317) TANG_NANO: Relay: OFF[0m
+[0;32mI (350317) TANG_NANO: Sent: I:5.0A[0m
+
+[0;32mI (350317) TANG_NANO: Relay: ON[0m
+[0;32mI (351317) TANG_NANO: Sent: I:5.1A[0m
+
+[0;32mI (351317) TANG_NANO: Relay: ON[0m
+[0;32mI (352317) TANG_NANO: Sent: I:5.2A[0m
+
+[0;32mI (352317) TANG_NANO: Relay: ON[0m
+[0;32mI (353317) TANG_NANO: Sent: I:5.3A[0m
+
+[0;32mI (353317) TANG_NANO: Relay: ON[0m
+[0;32mI (354317) TANG_NANO: Sent: I:5.4A[0m
+
+[0;32mI (354317) TANG_NANO: Relay: ON[0m
+[0;32mI (355317) TANG_NANO: Sent: I:5.5A[0m
+
+[0;32mI (355317) TANG_NANO: Relay: OFF[0m
+[0;32mI (356317) TANG_NANO: Sent: I:5.6A[0m
+
+[0;32mI (356317) TANG_NANO: Relay: OFF[0m
+[0;32mI (357317) TANG_NANO: Sent: I:5.7A[0m
+
+[0;32mI (357317) TANG_NANO: Relay: OFF[0m
+[0;32mI (358317) TANG_NANO: Sent: I:5.8A[0m
+
+[0;32mI (358317) TANG_NANO: Relay: OFF[0m
+[0;32mI (359317) TANG_NANO: Sent: I:5.9A[0m
+
+[0;32mI (359317) TANG_NANO: Relay: OFF[0m
+[0;32mI (360317) TANG_NANO: Sent: I:6.0A[0m
+
+[0;32mI (360317) TANG_NANO: Relay: ON[0m
+[0;32mI (361317) TANG_NANO: Sent: I:6.1A[0m
+
+[0;32mI (361317) TANG_NANO: Relay: ON[0m
+[0;32mI (362317) TANG_NANO: Sent: I:6.2A[0m
+
+[0;32mI (362317) TANG_NANO: Relay: ON[0m
+[0;32mI (363317) TANG_NANO: Sent: I:6.3A[0m
+
+[0;32mI (363317) TANG_NANO: Relay: ON[0m
+[0;32mI (364317) TANG_NANO: Sent: I:6.4A[0m
+
+[0;32mI (364317) TANG_NANO: Relay: ON[0m
+[0;32mI (365317) TANG_NANO: Sent: I:6.5A[0m
+
+[0;32mI (365317) TANG_NANO: Relay: OFF[0m
+[0;32mI (366317) TANG_NANO: Sent: I:6.6A[0m
+
+[0;32mI (366317) TANG_NANO: Relay: OFF[0m
+[0;32mI (367317) TANG_NANO: Sent: I:6.7A[0m
+
+[0;32mI (367317) TANG_NANO: Relay: OFF[0m
+[0;32mI (368317) TANG_NANO: Sent: I:6.8A[0m
+
+[0;32mI (368317) TANG_NANO: Relay: OFF[0m
+[0;32mI (369317) TANG_NANO: Sent: I:6.9A[0m
+
+[0;32mI (369317) TANG_NANO: Relay: OFF[0m
+[0;32mI (370317) TANG_NANO: Sent: I:7.0A[0m
+
+[0;32mI (370317) TANG_NANO: Relay: ON[0m
+[0;32mI (371317) TANG_NANO: Sent: I:7.1A[0m
+
+[0;32mI (371317) TANG_NANO: Relay: ON[0m
+[0;32mI (372317) TANG_NANO: Sent: I:7.2A[0m
+
+[0;32mI (372317) TANG_NANO: Relay: ON[0m
+[0;32mI (373317) TANG_NANO: Sent: I:7.3A[0m
+
+[0;32mI (373317) TANG_NANO: Relay: ON[0m
+[0;32mI (374317) TANG_NANO: Sent: I:7.4A[0m
+
+[0;32mI (374317) TANG_NANO: Relay: ON[0m
+[0;32mI (375317) TANG_NANO: Sent: I:7.5A[0m
+
+[0;32mI (375317) TANG_NANO: Relay: OFF[0m
+[0;32mI (376317) TANG_NANO: Sent: I:7.6A[0m
+
+[0;32mI (376317) TANG_NANO: Relay: OFF[0m
+[0;32mI (377317) TANG_NANO: Sent: I:7.7A[0m
+
+[0;32mI (377317) TANG_NANO: Relay: OFF[0m
+[0;32mI (378317) TANG_NANO: Sent: I:7.8A[0m
+
+[0;32mI (378317) TANG_NANO: Relay: OFF[0m
+[0;32mI (379317) TANG_NANO: Sent: I:7.9A[0m
+
+[0;32mI (379317) TANG_NANO: Relay: OFF[0m
+[0;32mI (380317) TANG_NANO: Sent: I:8.0A[0m
+
+[0;32mI (380317) TANG_NANO: Relay: ON[0m
+[0;32mI (381317) TANG_NANO: Sent: I:8.1A[0m
+
+[0;32mI (381317) TANG_NANO: Relay: ON[0m
+[0;32mI (382317) TANG_NANO: Sent: I:8.2A[0m
+
+[0;32mI (382317) TANG_NANO: Relay: ON[0m
+[0;32mI (383317) TANG_NANO: Sent: I:8.3A[0m
+
+[0;32mI (383317) TANG_NANO: Relay: ON[0m
+[0;32mI (384317) TANG_NANO: Sent: I:8.4A[0m
+
+[0;32mI (384317) TANG_NANO: Relay: ON[0m
+[0;32mI (385317) TANG_NANO: Sent: I:8.5A[0m
+
+[0;32mI (385317) TANG_NANO: Relay: OFF[0m
+[0;32mI (386317) TANG_NANO: Sent: I:8.6A[0m
+
+[0;32mI (386317) TANG_NANO: Relay: OFF[0m
+[0;32mI (387317) TANG_NANO: Sent: I:8.7A[0m
+
+[0;32mI (387317) TANG_NANO: Relay: OFF[0m
+[0;32mI (388317) TANG_NANO: Sent: I:8.8A[0m
+
+[0;32mI (388317) TANG_NANO: Relay: OFF[0m
+[0;32mI (389317) TANG_NANO: Sent: I:8.9A[0m
+
+[0;32mI (389317) TANG_NANO: Relay: OFF[0m
+[0;32mI (390317) TANG_NANO: Sent: I:9.0A[0m
+
+[0;32mI (390317) TANG_NANO: Relay: ON[0m
+[0;32mI (391317) TANG_NANO: Sent: I:9.1A[0m
+
+[0;32mI (391317) TANG_NANO: Relay: ON[0m
+[0;32mI (392317) TANG_NANO: Sent: I:9.2A[0m
+
+[0;32mI (392317) TANG_NANO: Relay: ON[0m
+[0;32mI (393317) TANG_NANO: Sent: I:9.3A[0m
+
+[0;32mI (393317) TANG_NANO: Relay: ON[0m
+[0;32mI (394317) TANG_NANO: Sent: I:9.4A[0m
+
+[0;32mI (394317) TANG_NANO: Relay: ON[0m
+[0;32mI (395317) TANG_NANO: Sent: I:9.5A[0m
+
+[0;32mI (395317) TANG_NANO: Relay: OFF[0m
+[0;32mI (396317) TANG_NANO: Sent: I:9.6A[0m
+
+[0;32mI (396317) TANG_NANO: Relay: OFF[0m
+[0;32mI (397317) TANG_NANO: Sent: I:9.7A[0m
+
+[0;32mI (397317) TANG_NANO: Relay: OFF[0m
+[0;32mI (398317) TANG_NANO: Sent: I:9.8A[0m
+
+[0;32mI (398317) TANG_NANO: Relay: OFF[0m
+[0;32mI (399317) TANG_NANO: Sent: I:9.9A[0m
+
+[0;32mI (399317) TANG_NANO: Relay: OFF[0m
+[0;32mI (400317) TANG_NANO: Sent: I:0.0A[0m
+
+[0;32mI (400317) TANG_NANO: Relay: ON[0m
+[0;32mI (401317) TANG_NANO: Sent: I:0.1A[0m
+
+[0;32mI (401317) TANG_NANO: Relay: ON[0m
+[0;32mI (402317) TANG_NANO: Sent: I:0.2A[0m
+
+[0;32mI (402317) TANG_NANO: Relay: ON[0m
+[0;32mI (403317) TANG_NANO: Sent: I:0.3A[0m
+
+[0;32mI (403317) TANG_NANO: Relay: ON[0m
+[0;32mI (404317) TANG_NANO: Sent: I:0.4A[0m
+
+[0;32mI (404317) TANG_NANO: Relay: ON[0m
+[0;32mI (405317) TANG_NANO: Sent: I:0.5A[0m
+
+[0;32mI (405317) TANG_NANO: Relay: OFF[0m
+[0;32mI (406317) TANG_NANO: Sent: I:0.6A[0m
+
+[0;32mI (406317) TANG_NANO: Relay: OFF[0m
+[0;32mI (407317) TANG_NANO: Sent: I:0.7A[0m
+
+[0;32mI (407317) TANG_NANO: Relay: OFF[0m
+[0;32mI (408317) TANG_NANO: Sent: I:0.8A[0m
+
+[0;32mI (408317) TANG_NANO: Relay: OFF[0m
+[0;32mI (409317) TANG_NANO: Sent: I:0.9A[0m
+
+[0;32mI (409317) TANG_NANO: Relay: OFF[0m
+[0;32mI (410317) TANG_NANO: Sent: I:1.0A[0m
+
+[0;32mI (410317) TANG_NANO: Relay: ON[0m
+[0;32mI (411317) TANG_NANO: Sent: I:1.1A[0m
+
+[0;32mI (411317) TANG_NANO: Relay: ON[0m
+[0;32mI (412317) TANG_NANO: Sent: I:1.2A[0m
+
+[0;32mI (412317) TANG_NANO: Relay: ON[0m
+[0;32mI (413317) TANG_NANO: Sent: I:1.3A[0m
+
+[0;32mI (413317) TANG_NANO: Relay: ON[0m
+[0;32mI (414317) TANG_NANO: Sent: I:1.4A[0m
+
+[0;32mI (414317) TANG_NANO: Relay: ON[0m
+[0;32mI (415317) TANG_NANO: Sent: I:1.5A[0m
+
+[0;32mI (415317) TANG_NANO: Relay: OFF[0m
+[0;32mI (416317) TANG_NANO: Sent: I:1.6A[0m
+
+[0;32mI (416317) TANG_NANO: Relay: OFF[0m
+[0;32mI (417317) TANG_NANO: Sent: I:1.7A[0m
+
+[0;32mI (417317) TANG_NANO: Relay: OFF[0m
+[0;32mI (418317) TANG_NANO: Sent: I:1.8A[0m
+
+[0;32mI (418317) TANG_NANO: Relay: OFF[0m
+[0;32mI (419317) TANG_NANO: Sent: I:1.9A[0m
+
+[0;32mI (419317) TANG_NANO: Relay: OFF[0m
+[0;32mI (420317) TANG_NANO: Sent: I:2.0A[0m
+
+[0;32mI (420317) TANG_NANO: Relay: ON[0m
+[0;32mI (421317) TANG_NANO: Sent: I:2.1A[0m
+
+[0;32mI (421317) TANG_NANO: Relay: ON[0m
+[0;32mI (422317) TANG_NANO: Sent: I:2.2A[0m
+
+[0;32mI (422317) TANG_NANO: Relay: ON[0m
+[0;32mI (423317) TANG_NANO: Sent: I:2.3A[0m
+
+[0;32mI (423317) TANG_NANO: Relay: ON[0m
+[0;32mI (424317) TANG_NANO: Sent: I:2.4A[0m
+
+[0;32mI (424317) TANG_NANO: Relay: ON[0m
+[0;32mI (425317) TANG_NANO: Sent: I:2.5A[0m
+
+[0;32mI (425317) TANG_NANO: Relay: OFF[0m
+[0;32mI (426317) TANG_NANO: Sent: I:2.6A[0m
+
+[0;32mI (426317) TANG_NANO: Relay: OFF[0m
+[0;32mI (427317) TANG_NANO: Sent: I:2.7A[0m
+
+[0;32mI (427317) TANG_NANO: Relay: OFF[0m
+[0;32mI (428317) TANG_NANO: Sent: I:2.8A[0m
+
+[0;32mI (428317) TANG_NANO: Relay: OFF[0m
+[0;32mI (429317) TANG_NANO: Sent: I:2.9A[0m
+
+[0;32mI (429317) TANG_NANO: Relay: OFF[0m
+[0;32mI (430317) TANG_NANO: Sent: I:3.0A[0m
+
+[0;32mI (430317) TANG_NANO: Relay: ON[0m
+[0;32mI (431317) TANG_NANO: Sent: I:3.1A[0m
+
+[0;32mI (431317) TANG_NANO: Relay: ON[0m
+[0;32mI (432317) TANG_NANO: Sent: I:3.2A[0m
+
+[0;32mI (432317) TANG_NANO: Relay: ON[0m
+[0;32mI (433317) TANG_NANO: Sent: I:3.3A[0m
+
+[0;32mI (433317) TANG_NANO: Relay: ON[0m
+[0;32mI (434317) TANG_NANO: Sent: I:3.4A[0m
+
+[0;32mI (434317) TANG_NANO: Relay: ON[0m
+[0;32mI (435317) TANG_NANO: Sent: I:3.5A[0m
+
+[0;32mI (435317) TANG_NANO: Relay: OFF[0m
+[0;32mI (436317) TANG_NANO: Sent: I:3.6A[0m
+
+[0;32mI (436317) TANG_NANO: Relay: OFF[0m
+[0;32mI (437317) TANG_NANO: Sent: I:3.7A[0m
+
+[0;32mI (437317) TANG_NANO: Relay: OFF[0m
+[0;32mI (438317) TANG_NANO: Sent: I:3.8A[0m
+
+[0;32mI (438317) TANG_NANO: Relay: OFF[0m
+[0;32mI (439317) TANG_NANO: Sent: I:3.9A[0m
+
+[0;32mI (439317) TANG_NANO: Relay: OFF[0m
+[0;32mI (440317) TANG_NANO: Sent: I:4.0A[0m
+
+[0;32mI (440317) TANG_NANO: Relay: ON[0m
+[0;32mI (441317) TANG_NANO: Sent: I:4.1A[0m
+
+[0;32mI (441317) TANG_NANO: Relay: ON[0m
+[0;32mI (442317) TANG_NANO: Sent: I:4.2A[0m
+
+[0;32mI (442317) TANG_NANO: Relay: ON[0m
+[0;32mI (443317) TANG_NANO: Sent: I:4.3A[0m
+
+[0;32mI (443317) TANG_NANO: Relay: ON[0m
+[0;32mI (444317) TANG_NANO: Sent: I:4.4A[0m
+
+[0;32mI (444317) TANG_NANO: Relay: ON[0m
+[0;32mI (445317) TANG_NANO: Sent: I:4.5A[0m
+
+[0;32mI (445317) TANG_NANO: Relay: OFF[0m
+[0;32mI (446317) TANG_NANO: Sent: I:4.6A[0m
+
+[0;32mI (446317) TANG_NANO: Relay: OFF[0m
+[0;32mI (447317) TANG_NANO: Sent: I:4.7A[0m
+
+[0;32mI (447317) TANG_NANO: Relay: OFF[0m
+[0;32mI (448317) TANG_NANO: Sent: I:4.8A[0m
+
+[0;32mI (448317) TANG_NANO: Relay: OFF[0m
+[0;32mI (449317) TANG_NANO: Sent: I:4.9A[0m
+
+[0;32mI (449317) TANG_NANO: Relay: OFF[0m
+[0;32mI (450317) TANG_NANO: Sent: I:5.0A[0m
+
+[0;32mI (450317) TANG_NANO: Relay: ON[0m
+[0;32mI (451317) TANG_NANO: Sent: I:5.1A[0m
+
+[0;32mI (451317) TANG_NANO: Relay: ON[0m
+[0;32mI (452317) TANG_NANO: Sent: I:5.2A[0m
+
+[0;32mI (452317) TANG_NANO: Relay: ON[0m
+[0;32mI (453317) TANG_NANO: Sent: I:5.3A[0m
+
+[0;32mI (453317) TANG_NANO: Relay: ON[0m
+[0;32mI (454317) TANG_NANO: Sent: I:5.4A[0m
+
+[0;32mI (454317) TANG_NANO: Relay: ON[0m
+[0;32mI (455317) TANG_NANO: Sent: I:5.5A[0m
+
+[0;32mI (455317) TANG_NANO: Relay: OFF[0m
+[0;32mI (456317) TANG_NANO: Sent: I:5.6A[0m
+
+[0;32mI (456317) TANG_NANO: Relay: OFF[0m
+[0;32mI (457317) TANG_NANO: Sent: I:5.7A[0m
+
+[0;32mI (457317) TANG_NANO: Relay: OFF[0m
+[0;32mI (458317) TANG_NANO: Sent: I:5.8A[0m
+
+[0;32mI (458317) TANG_NANO: Relay: OFF[0m
+[0;32mI (459317) TANG_NANO: Sent: I:5.9A[0m
+
+[0;32mI (459317) TANG_NANO: Relay: OFF[0m
+[0;32mI (460317) TANG_NANO: Sent: I:6.0A[0m
+
+[0;32mI (460317) TANG_NANO: Relay: ON[0m
+[0;32mI (461317) TANG_NANO: Sent: I:6.1A[0m
+
+[0;32mI (461317) TANG_NANO: Relay: ON[0m
+[0;32mI (462317) TANG_NANO: Sent: I:6.2A[0m
+
+[0;32mI (462317) TANG_NANO: Relay: ON[0m
+[0;32mI (463317) TANG_NANO: Sent: I:6.3A[0m
+
+[0;32mI (463317) TANG_NANO: Relay: ON[0m
+[0;32mI (464317) TANG_NANO: Sent: I:6.4A[0m
+
+[0;32mI (464317) TANG_NANO: Relay: ON[0m
+[0;32mI (465317) TANG_NANO: Sent: I:6.5A[0m
+
+[0;32mI (465317) TANG_NANO: Relay: OFF[0m
+[0;32mI (466317) TANG_NANO: Sent: I:6.6A[0m
+
+[0;32mI (466317) TANG_NANO: Relay: OFF[0m
+[0;32mI (467317) TANG_NANO: Sent: I:6.7A[0m
+
+[0;32mI (467317) TANG_NANO: Relay: OFF[0m
+[0;32mI (468317) TANG_NANO: Sent: I:6.8A[0m
+
+[0;32mI (468317) TANG_NANO: Relay: OFF[0m
+[0;32mI (469317) TANG_NANO: Sent: I:6.9A[0m
+
+[0;32mI (469317) TANG_NANO: Relay: OFF[0m
+[0;32mI (470317) TANG_NANO: Sent: I:7.0A[0m
+
+[0;32mI (470317) TANG_NANO: Relay: ON[0m
+[0;32mI (471317) TANG_NANO: Sent: I:7.1A[0m
+
+[0;32mI (471317) TANG_NANO: Relay: ON[0m
+[0;32mI (472317) TANG_NANO: Sent: I:7.2A[0m
+
+[0;32mI (472317) TANG_NANO: Relay: ON[0m
+[0;32mI (473317) TANG_NANO: Sent: I:7.3A[0m
+
+[0;32mI (473317) TANG_NANO: Relay: ON[0m
+[0;32mI (474317) TANG_NANO: Sent: I:7.4A[0m
+
+[0;32mI (474317) TANG_NANO: Relay: ON[0m
+[0;32mI (475317) TANG_NANO: Sent: I:7.5A[0m
+
+[0;32mI (475317) TANG_NANO: Relay: OFF[0m
+[0;32mI (476317) TANG_NANO: Sent: I:7.6A[0m
+
+[0;32mI (476317) TANG_NANO: Relay: OFF[0m
+[0;32mI (477317) TANG_NANO: Sent: I:7.7A[0m
+
+[0;32mI (477317) TANG_NANO: Relay: OFF[0m
+[0;32mI (478317) TANG_NANO: Sent: I:7.8A[0m
+
+[0;32mI (478317) TANG_NANO: Relay: OFF[0m
+[0;32mI (479317) TANG_NANO: Sent: I:7.9A[0m
+
+[0;32mI (479317) TANG_NANO: Relay: OFF[0m
+[0;32mI (480317) TANG_NANO: Sent: I:8.0A[0m
+
+[0;32mI (480317) TANG_NANO: Relay: ON[0m
+[0;32mI (481317) TANG_NANO: Sent: I:8.1A[0m
+
+[0;32mI (481317) TANG_NANO: Relay: ON[0m
+[0;32mI (482317) TANG_NANO: Sent: I:8.2A[0m
+
+[0;32mI (482317) TANG_NANO: Relay: ON[0m
+[0;32mI (483317) TANG_NANO: Sent: I:8.3A[0m
+
+[0;32mI (483317) TANG_NANO: Relay: ON[0m
+[0;32mI (484317) TANG_NANO: Sent: I:8.4A[0m
+
+[0;32mI (484317) TANG_NANO: Relay: ON[0m
+[0;32mI (485317) TANG_NANO: Sent: I:8.5A[0m
+
+[0;32mI (485317) TANG_NANO: Relay: OFF[0m
+[0;32mI (486317) TANG_NANO: Sent: I:8.6A[0m
+
+[0;32mI (486317) TANG_NANO: Relay: OFF[0m
+[0;32mI (487317) TANG_NANO: Sent: I:8.7A[0m
+
+[0;32mI (487317) TANG_NANO: Relay: OFF[0m
+[0;32mI (488317) TANG_NANO: Sent: I:8.8A[0m
+
+[0;32mI (488317) TANG_NANO: Relay: OFF[0m
+[0;32mI (489317) TANG_NANO: Sent: I:8.9A[0m
+
+[0;32mI (489317) TANG_NANO: Relay: OFF[0m
+[0;32mI (490317) TANG_NANO: Sent: I:9.0A[0m
+
+[0;32mI (490317) TANG_NANO: Relay: ON[0m
+[0;32mI (491317) TANG_NANO: Sent: I:9.1A[0m
+
+[0;32mI (491317) TANG_NANO: Relay: ON[0m
+[0;32mI (492317) TANG_NANO: Sent: I:9.2A[0m
+
+[0;32mI (492317) TANG_NANO: Relay: ON[0m
+[0;32mI (493317) TANG_NANO: Sent: I:9.3A[0m
+
+[0;32mI (493317) TANG_NANO: Relay: ON[0m
+[0;32mI (494317) TANG_NANO: Sent: I:9.4A[0m
+
+[0;32mI (494317) TANG_NANO: Relay: ON[0m
+[0;32mI (495317) TANG_NANO: Sent: I:9.5A[0m
+
+[0;32mI (495317) TANG_NANO: Relay: OFF[0m
+[0;32mI (496317) TANG_NANO: Sent: I:9.6A[0m
+
+[0;32mI (496317) TANG_NANO: Relay: OFF[0m
+[0;32mI (497317) TANG_NANO: Sent: I:9.7A[0m
+
+[0;32mI (497317) TANG_NANO: Relay: OFF[0m
+[0;32mI (498317) TANG_NANO: Sent: I:9.8A[0m
+
+[0;32mI (498317) TANG_NANO: Relay: OFF[0m
+[0;32mI (499317) TANG_NANO: Sent: I:9.9A[0m
+
+[0;32mI (499317) TANG_NANO: Relay: OFF[0m
+[0;32mI (500317) TANG_NANO: Sent: I:0.0A[0m
+
+[0;32mI (500317) TANG_NANO: Relay: ON[0m
+[0;32mI (501317) TANG_NANO: Sent: I:0.1A[0m
+
+[0;32mI (501317) TANG_NANO: Relay: ON[0m
+[0;32mI (502317) TANG_NANO: Sent: I:0.2A[0m
+
+[0;32mI (502317) TANG_NANO: Relay: ON[0m
+[0;32mI (503317) TANG_NANO: Sent: I:0.3A[0m
+
+[0;32mI (503317) TANG_NANO: Relay: ON[0m
+[0;32mI (504317) TANG_NANO: Sent: I:0.4A[0m
+
+[0;32mI (504317) TANG_NANO: Relay: ON[0m
+[0;32mI (505317) TANG_NANO: Sent: I:0.5A[0m
+
+[0;32mI (505317) TANG_NANO: Relay: OFF[0m
+[0;32mI (506317) TANG_NANO: Sent: I:0.6A[0m
+
+[0;32mI (506317) TANG_NANO: Relay: OFF[0m
+[0;32mI (507317) TANG_NANO: Sent: I:0.7A[0m
+
+[0;32mI (507317) TANG_NANO: Relay: OFF[0m
+[0;32mI (508317) TANG_NANO: Sent: I:0.8A[0m
+
+[0;32mI (508317) TANG_NANO: Relay: OFF[0m
+[0;32mI (509317) TANG_NANO: Sent: I:0.9A[0m
+
+[0;32mI (509317) TANG_NANO: Relay: OFF[0m
+[0;32mI (510317) TANG_NANO: Sent: I:1.0A[0m
+
+[0;32mI (510317) TANG_NANO: Relay: ON[0m
+[0;32mI (511317) TANG_NANO: Sent: I:1.1A[0m
+
+[0;32mI (511317) TANG_NANO: Relay: ON[0m
+[0;32mI (512317) TANG_NANO: Sent: I:1.2A[0m
+
+[0;32mI (512317) TANG_NANO: Relay: ON[0m
+[0;32mI (513317) TANG_NANO: Sent: I:1.3A[0m
+
+[0;32mI (513317) TANG_NANO: Relay: ON[0m
+[0;32mI (514317) TANG_NANO: Sent: I:1.4A[0m
+
+[0;32mI (514317) TANG_NANO: Relay: ON[0m
+[0;32mI (515317) TANG_NANO: Sent: I:1.5A[0m
+
+[0;32mI (515317) TANG_NANO: Relay: OFF[0m
+[0;32mI (516317) TANG_NANO: Sent: I:1.6A[0m
+
+[0;32mI (516317) TANG_NANO: Relay: OFF[0m
+[0;32mI (517317) TANG_NANO: Sent: I:1.7A[0m
+
+[0;32mI (517317) TANG_NANO: Relay: OFF[0m
+[0;32mI (518317) TANG_NANO: Sent: I:1.8A[0m
+
+[0;32mI (518317) TANG_NANO: Relay: OFF[0m
+[0;32mI (519317) TANG_NANO: Sent: I:1.9A[0m
+
+[0;32mI (519317) TANG_NANO: Relay: OFF[0m
+[0;32mI (520317) TANG_NANO: Sent: I:2.0A[0m
+
+[0;32mI (520317) TANG_NANO: Relay: ON[0m
+[0;32mI (521317) TANG_NANO: Sent: I:2.1A[0m
+
+[0;32mI (521317) TANG_NANO: Relay: ON[0m
+[0;32mI (522317) TANG_NANO: Sent: I:2.2A[0m
+
+[0;32mI (522317) TANG_NANO: Relay: ON[0m
+[0;32mI (523317) TANG_NANO: Sent: I:2.3A[0m
+
+[0;32mI (523317) TANG_NANO: Relay: ON[0m
+[0;32mI (524317) TANG_NANO: Sent: I:2.4A[0m
+
+[0;32mI (524317) TANG_NANO: Relay: ON[0m
+[0;32mI (525317) TANG_NANO: Sent: I:2.5A[0m
+
+[0;32mI (525317) TANG_NANO: Relay: OFF[0m
+[0;32mI (526317) TANG_NANO: Sent: I:2.6A[0m
+
+[0;32mI (526317) TANG_NANO: Relay: OFF[0m
+[0;32mI (527317) TANG_NANO: Sent: I:2.7A[0m
+
+[0;32mI (527317) TANG_NANO: Relay: OFF[0m
+[0;32mI (528317) TANG_NANO: Sent: I:2.8A[0m
+
+[0;32mI (528317) TANG_NANO: Relay: OFF[0m
+[0;32mI (529317) TANG_NANO: Sent: I:2.9A[0m
+
+[0;32mI (529317) TANG_NANO: Relay: OFF[0m
+[0;32mI (530317) TANG_NANO: Sent: I:3.0A[0m
+
+[0;32mI (530317) TANG_NANO: Relay: ON[0m
+[0;32mI (531317) TANG_NANO: Sent: I:3.1A[0m
+
+[0;32mI (531317) TANG_NANO: Relay: ON[0m
+[0;32mI (532317) TANG_NANO: Sent: I:3.2A[0m
+
+[0;32mI (532317) TANG_NANO: Relay: ON[0m
+[0;32mI (533317) TANG_NANO: Sent: I:3.3A[0m
+
+[0;32mI (533317) TANG_NANO: Relay: ON[0m
+[0;32mI (534317) TANG_NANO: Sent: I:3.4A[0m
+
+[0;32mI (534317) TANG_NANO: Relay: ON[0m
+[0;32mI (535317) TANG_NANO: Sent: I:3.5A[0m
+
+[0;32mI (535317) TANG_NANO: Relay: OFF[0m
+[0;32mI (536317) TANG_NANO: Sent: I:3.6A[0m
+
+[0;32mI (536317) TANG_NANO: Relay: OFF[0m
+[0;32mI (537317) TANG_NANO: Sent: I:3.7A[0m
+
+[0;32mI (537317) TANG_NANO: Relay: OFF[0m
+[0;32mI (538317) TANG_NANO: Sent: I:3.8A[0m
+
+[0;32mI (538317) TANG_NANO: Relay: OFF[0m
+[0;32mI (539317) TANG_NANO: Sent: I:3.9A[0m
+
+[0;32mI (539317) TANG_NANO: Relay: OFF[0m
+[0;32mI (540317) TANG_NANO: Sent: I:4.0A[0m
+
+[0;32mI (540317) TANG_NANO: Relay: ON[0m
+[0;32mI (541317) TANG_NANO: Sent: I:4.1A[0m
+
+[0;32mI (541317) TANG_NANO: Relay: ON[0m
+[0;32mI (542317) TANG_NANO: Sent: I:4.2A[0m
+
+[0;32mI (542317) TANG_NANO: Relay: ON[0m
+[0;32mI (543317) TANG_NANO: Sent: I:4.3A[0m
+
+[0;32mI (543317) TANG_NANO: Relay: ON[0m
+[0;32mI (544317) TANG_NANO: Sent: I:4.4A[0m
+
+[0;32mI (544317) TANG_NANO: Relay: ON[0m
+[0;32mI (545317) TANG_NANO: Sent: I:4.5A[0m
+
+[0;32mI (545317) TANG_NANO: Relay: OFF[0m
+[0;32mI (546317) TANG_NANO: Sent: I:4.6A[0m
+
+[0;32mI (546317) TANG_NANO: Relay: OFF[0m
+[0;32mI (547317) TANG_NANO: Sent: I:4.7A[0m
+
+[0;32mI (547317) TANG_NANO: Relay: OFF[0m
+[0;32mI (548317) TANG_NANO: Sent: I:4.8A[0m
+
+[0;32mI (548317) TANG_NANO: Relay: OFF[0m
+[0;32mI (549317) TANG_NANO: Sent: I:4.9A[0m
+
+[0;32mI (549317) TANG_NANO: Relay: OFF[0m
+[0;32mI (550317) TANG_NANO: Sent: I:5.0A[0m
+
+[0;32mI (550317) TANG_NANO: Relay: ON[0m
+[0;32mI (551317) TANG_NANO: Sent: I:5.1A[0m
+
+[0;32mI (551317) TANG_NANO: Relay: ON[0m
+[0;32mI (552317) TANG_NANO: Sent: I:5.2A[0m
+
+[0;32mI (552317) TANG_NANO: Relay: ON[0m
+[0;32mI (553317) TANG_NANO: Sent: I:5.3A[0m
+
+[0;32mI (553317) TANG_NANO: Relay: ON[0m
+[0;32mI (554317) TANG_NANO: Sent: I:5.4A[0m
+
+[0;32mI (554317) TANG_NANO: Relay: ON[0m
+[0;32mI (555317) TANG_NANO: Sent: I:5.5A[0m
+
+[0;32mI (555317) TANG_NANO: Relay: OFF[0m
+[0;32mI (556317) TANG_NANO: Sent: I:5.6A[0m
+
+[0;32mI (556317) TANG_NANO: Relay: OFF[0m
+[0;32mI (557317) TANG_NANO: Sent: I:5.7A[0m
+
+[0;32mI (557317) TANG_NANO: Relay: OFF[0m
+[0;32mI (558317) TANG_NANO: Sent: I:5.8A[0m
+
+[0;32mI (558317) TANG_NANO: Relay: OFF[0m
+[0;32mI (559317) TANG_NANO: Sent: I:5.9A[0m
+
+[0;32mI (559317) TANG_NANO: Relay: OFF[0m
+[0;32mI (560317) TANG_NANO: Sent: I:6.0A[0m
+
+[0;32mI (560317) TANG_NANO: Relay: ON[0m
+[0;32mI (561317) TANG_NANO: Sent: I:6.1A[0m
+
+[0;32mI (561317) TANG_NANO: Relay: ON[0m
+[0;32mI (562317) TANG_NANO: Sent: I:6.2A[0m
+
+[0;32mI (562317) TANG_NANO: Relay: ON[0m
+[0;32mI (563317) TANG_NANO: Sent: I:6.3A[0m
+
+[0;32mI (563317) TANG_NANO: Relay: ON[0m
+[0;32mI (564317) TANG_NANO: Sent: I:6.4A[0m
+
+[0;32mI (564317) TANG_NANO: Relay: ON[0m
+[0;32mI (565317) TANG_NANO: Sent: I:6.5A[0m
+
+[0;32mI (565317) TANG_NANO: Relay: OFF[0m
+[0;32mI (566317) TANG_NANO: Sent: I:6.6A[0m
+
+[0;32mI (566317) TANG_NANO: Relay: OFF[0m
+[0;32mI (567317) TANG_NANO: Sent: I:6.7A[0m
+
+[0;32mI (567317) TANG_NANO: Relay: OFF[0m
+[0;32mI (568317) TANG_NANO: Sent: I:6.8A[0m
+
+[0;32mI (568317) TANG_NANO: Relay: OFF[0m

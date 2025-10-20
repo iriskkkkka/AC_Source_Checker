@@ -2353,16 +2353,6 @@
         "children": [],
         "depends_on": null,
         "help": null,
-        "id": "SOC_SDMMC_DATA_WIDTH_MAX",
-        "name": "SOC_SDMMC_DATA_WIDTH_MAX",
-        "range": null,
-        "title": null,
-        "type": "int"
-    },
-    {
-        "children": [],
-        "depends_on": null,
-        "help": null,
         "id": "SOC_WIFI_WAPI_SUPPORT",
         "name": "SOC_WIFI_WAPI_SUPPORT",
         "range": null,
@@ -9281,6 +9271,16 @@
                             {
                                 "children": [],
                                 "depends_on": "BT_BLE_ENABLED && BT_BLUEDROID_ENABLED",
+                                "help": "This enables BLE vendor HCI command and event",
+                                "id": "BT_BLE_VENDOR_HCI_EN",
+                                "name": "BT_BLE_VENDOR_HCI_EN",
+                                "range": null,
+                                "title": "Enable BLE Vendor HCI command and event",
+                                "type": "bool"
+                            },
+                            {
+                                "children": [],
+                                "depends_on": "BT_BLE_ENABLED && BT_BLUEDROID_ENABLED",
                                 "help": "This enable BLE high duty advertising interval feature",
                                 "id": "BT_BLE_HIGH_DUTY_ADV_INTERVAL",
                                 "name": "BT_BLE_HIGH_DUTY_ADV_INTERVAL",
@@ -9920,7 +9920,7 @@
                                         "type": "bool"
                                     }
                                 ],
-                                "depends_on": "BT_NIMBLE_ENABLED && BT_NIMBLE_ENABLED",
+                                "depends_on": "BT_NIMBLE_ENABLED && !SOC_ESP_NIMBLE_CONTROLLER && BT_NIMBLE_ENABLED",
                                 "help": "Enable Host Flow control",
                                 "id": "BT_NIMBLE_HS_FLOW_CTRL",
                                 "name": "BT_NIMBLE_HS_FLOW_CTRL",
@@ -12235,7 +12235,7 @@
                                             {
                                                 "children": [],
                                                 "depends_on": "BT_BLE_LOG_SPI_OUT_LL_ENABLED",
-                                                "help": "SPI transaction buffer size for upper layer task logs.\nThere will be 2 SPI DMA buffers with the same size.",
+                                                "help": "SPI transaction buffer size for lower layer task logs.\nThere will be 2 SPI DMA buffers with the same size.",
                                                 "id": "BT_BLE_LOG_SPI_OUT_LL_TASK_BUF_SIZE",
                                                 "name": "BT_BLE_LOG_SPI_OUT_LL_TASK_BUF_SIZE",
                                                 "range": null,
@@ -12245,11 +12245,21 @@
                                             {
                                                 "children": [],
                                                 "depends_on": "BT_BLE_LOG_SPI_OUT_LL_ENABLED",
-                                                "help": "SPI transaction buffer size for upper layer ISR logs.\nThere will be 2 SPI DMA buffers with the same size.",
+                                                "help": "SPI transaction buffer size for lower layer ISR logs.\nThere will be 2 SPI DMA buffers with the same size.",
                                                 "id": "BT_BLE_LOG_SPI_OUT_LL_ISR_BUF_SIZE",
                                                 "name": "BT_BLE_LOG_SPI_OUT_LL_ISR_BUF_SIZE",
                                                 "range": null,
                                                 "title": "SPI transaction buffer size for lower layer ISR logs",
+                                                "type": "int"
+                                            },
+                                            {
+                                                "children": [],
+                                                "depends_on": "BT_BLE_LOG_SPI_OUT_LL_ENABLED",
+                                                "help": "SPI transaction buffer size for upper layer HCI logs.\nThere will be 2 SPI DMA buffers with the same size",
+                                                "id": "BT_BLE_LOG_SPI_OUT_LL_HCI_BUF_SIZE",
+                                                "name": "BT_BLE_LOG_SPI_OUT_LL_HCI_BUF_SIZE",
+                                                "range": null,
+                                                "title": "SPI transaction buffer size for lower layer HCI logs",
                                                 "type": "int"
                                             }
                                         ],
@@ -12311,27 +12321,6 @@
                                         "range": null,
                                         "title": "Enable ble log & logic analyzer log time sync",
                                         "type": "bool"
-                                    },
-                                    {
-                                        "children": [
-                                            {
-                                                "children": [],
-                                                "depends_on": "BT_BLE_LOG_SPI_OUT_FLUSH_TIMER_ENABLED",
-                                                "help": "Buffer flush out period in unit of ms",
-                                                "id": "BT_BLE_LOG_SPI_OUT_FLUSH_TIMEOUT",
-                                                "name": "BT_BLE_LOG_SPI_OUT_FLUSH_TIMEOUT",
-                                                "range": null,
-                                                "title": "Buffer flush out period in unit of ms",
-                                                "type": "int"
-                                            }
-                                        ],
-                                        "depends_on": "BT_BLE_LOG_SPI_OUT_ENABLED",
-                                        "help": "Enable periodic buffer flush out\nNot recommended when SPI receiver is unavailable",
-                                        "id": "BT_BLE_LOG_SPI_OUT_FLUSH_TIMER_ENABLED",
-                                        "name": "BT_BLE_LOG_SPI_OUT_FLUSH_TIMER_ENABLED",
-                                        "range": null,
-                                        "title": "Enable periodic buffer flush out",
-                                        "type": "bool"
                                     }
                                 ],
                                 "depends_on": null,
@@ -12340,6 +12329,58 @@
                                 "name": "BT_BLE_LOG_SPI_OUT_ENABLED",
                                 "range": null,
                                 "title": "Output ble logs to SPI bus (Experimental)",
+                                "type": "bool"
+                            },
+                            {
+                                "children": [],
+                                "depends_on": "BT_BLE_LOG_SPI_OUT_LL_ENABLED",
+                                "help": "Enable ble log & logic analyzer log time sync sleep support",
+                                "id": "BT_BLE_LOG_SPI_OUT_TS_SYNC_SLEEP_SUPPORT",
+                                "name": "BT_BLE_LOG_SPI_OUT_TS_SYNC_SLEEP_SUPPORT",
+                                "range": null,
+                                "title": "Enable ble log & logic analyzer log time sync sleep support",
+                                "type": "bool"
+                            },
+                            {
+                                "children": [
+                                    {
+                                        "children": [],
+                                        "depends_on": "BT_BLE_LOG_SPI_OUT_FLUSH_TIMER_ENABLED",
+                                        "help": "Buffer flush out period in unit of ms",
+                                        "id": "BT_BLE_LOG_SPI_OUT_FLUSH_TIMEOUT",
+                                        "name": "BT_BLE_LOG_SPI_OUT_FLUSH_TIMEOUT",
+                                        "range": null,
+                                        "title": "Buffer flush out period in unit of ms",
+                                        "type": "int"
+                                    }
+                                ],
+                                "depends_on": "BT_BLE_LOG_SPI_OUT_ENABLED",
+                                "help": "Enable periodic buffer flush out\nNot recommended when SPI receiver is unavailable",
+                                "id": "BT_BLE_LOG_SPI_OUT_FLUSH_TIMER_ENABLED",
+                                "name": "BT_BLE_LOG_SPI_OUT_FLUSH_TIMER_ENABLED",
+                                "range": null,
+                                "title": "Enable periodic buffer flush out",
+                                "type": "bool"
+                            },
+                            {
+                                "children": [
+                                    {
+                                        "children": [],
+                                        "depends_on": "BT_BLE_LOG_SPI_OUT_LE_AUDIO_ENABLED",
+                                        "help": "SPI transaction buffer size for LE Audio logs.\nThere will be 2 SPI DMA buffers with the same size.",
+                                        "id": "BT_BLE_LOG_SPI_OUT_LE_AUDIO_BUF_SIZE",
+                                        "name": "BT_BLE_LOG_SPI_OUT_LE_AUDIO_BUF_SIZE",
+                                        "range": null,
+                                        "title": "SPI transaction buffer size for LE Audio logs",
+                                        "type": "int"
+                                    }
+                                ],
+                                "depends_on": "BT_BLE_LOG_SPI_OUT_ENABLED",
+                                "help": "Enable LE Audio log output to SPI",
+                                "id": "BT_BLE_LOG_SPI_OUT_LE_AUDIO_ENABLED",
+                                "name": "BT_BLE_LOG_SPI_OUT_LE_AUDIO_ENABLED",
+                                "range": null,
+                                "title": "Enable LE Audio log output to SPI",
                                 "type": "bool"
                             }
                         ],
@@ -12496,7 +12537,7 @@
                                 "type": "menu"
                             }
                         ],
-                        "depends_on": "BLE_MESH_EXPERIMENTAL && (IDF_TARGET_ESP32C3 || IDF_TARGET_ESP32S3) && BLE_MESH",
+                        "depends_on": "BLE_MESH_EXPERIMENTAL && BLE_MESH",
                         "help": "This option to enable BLE Mesh using some BLE 5.0 APIs.",
                         "id": "BLE_MESH_USE_BLE_50",
                         "is_menuconfig": true,
@@ -16279,24 +16320,6 @@
                 "depends_on": "SOC_SDM_SUPPORTED",
                 "id": "component-config-esp-driver-sigma-delta-modulator-configurations",
                 "title": "ESP-Driver:Sigma Delta Modulator Configurations",
-                "type": "menu"
-            },
-            {
-                "children": [
-                    {
-                        "children": [],
-                        "depends_on": "SOC_SDMMC_HOST_SUPPORTED",
-                        "help": "Ensure the SD Host SDMMC driver ISR is Cache-Safe. When enabled,\nthe ISR handler will be available when the cache is disabled.",
-                        "id": "SD_HOST_SDMMC_ISR_CACHE_SAFE",
-                        "name": "SD_HOST_SDMMC_ISR_CACHE_SAFE",
-                        "range": null,
-                        "title": "SD Host ISR Cache-Safe",
-                        "type": "bool"
-                    }
-                ],
-                "depends_on": "SOC_SDMMC_HOST_SUPPORTED",
-                "id": "component-config-esp-driver-sd-host-sdmmc-controller-configurations",
-                "title": "ESP-Driver: SD Host SDMMC Controller Configurations",
                 "type": "menu"
             },
             {

@@ -1,4 +1,4 @@
-# Install script for directory: /home/iriska/esp/esp-idf/components/soc
+# Install script for directory: /home/iriska/esp-idf/components/soc
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

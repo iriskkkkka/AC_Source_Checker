@@ -2353,16 +2353,6 @@
         "children": [],
         "depends_on": null,
         "help": null,
-        "id": "SOC_SDMMC_DATA_WIDTH_MAX",
-        "name": "SOC_SDMMC_DATA_WIDTH_MAX",
-        "range": null,
-        "title": null,
-        "type": "int"
-    },
-    {
-        "children": [],
-        "depends_on": null,
-        "help": null,
         "id": "SOC_WIFI_WAPI_SUPPORT",
         "name": "SOC_WIFI_WAPI_SUPPORT",
         "range": null,

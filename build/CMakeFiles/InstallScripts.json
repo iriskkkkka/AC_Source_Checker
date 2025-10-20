@@ -71,7 +71,6 @@
 		"/home/iriska/ssd/transformer/build/esp-idf/esp_driver_ana_cmpr/cmake_install.cmake",
 		"/home/iriska/ssd/transformer/build/esp-idf/esp_driver_i2s/cmake_install.cmake",
 		"/home/iriska/ssd/transformer/build/esp-idf/sdmmc/cmake_install.cmake",
-		"/home/iriska/ssd/transformer/build/esp-idf/esp_driver_sd_intf/cmake_install.cmake",
 		"/home/iriska/ssd/transformer/build/esp-idf/esp_driver_sdmmc/cmake_install.cmake",
 		"/home/iriska/ssd/transformer/build/esp-idf/esp_driver_sdspi/cmake_install.cmake",
 		"/home/iriska/ssd/transformer/build/esp-idf/esp_driver_sdio/cmake_install.cmake",

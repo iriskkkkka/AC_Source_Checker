@@ -1,0 +1,963 @@
+Command: /home/iriska/.espressif/python_env/idf5.5_py3.13_env/bin/python /home/iriska/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/iriska/ssd/transformer/build/esp32_ampermeter_display.elf /home/iriska/ssd/transformer/build/bootloader/bootloader.elf -m '/home/iriska/.espressif/python_env/idf5.5_py3.13_env/bin/python' '/home/iriska/esp-idf/tools/idf.py'
+[0;32mI (13) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (13) boot: compile time Oct 19 2025 23:17:59[0m
+[0;32mI (13) boot: Multicore bootloader[0m
+[0;32mI (13) boot: chip revision: v1.1[0m
+[0;32mI (16) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (20) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (23) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (27) boot: Enabling RNG early entropy source...[0m
+[0;32mI (31) boot: Partition Table:[0m
+[0;32mI (34) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (40) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (47) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (53) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (60) boot: End of partition table[0m
+[0;32mI (63) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0badch ( 47836) map[0m
+[0;32mI (87) esp_image: segment 1: paddr=0001bb04 vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (87) esp_image: segment 2: paddr=0001bb2c vaddr=3ffb0000 size=023e8h (  9192) load[0m
+[0;32mI (94) esp_image: segment 3: paddr=0001df1c vaddr=40080000 size=020fch (  8444) load[0m
+[0;32mI (102) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=1afd8h (110552) map[0m
+[0;32mI (143) esp_image: segment 5: paddr=0003b000 vaddr=400820fc size=0bf10h ( 48912) load[0m
+[0;32mI (170) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (170) boot: Disabling RNG early entropy source...[0m
+[0;32mI (180) cpu_start: Multicore app[0m
+[0;32mI (188) cpu_start: Pro cpu start user code[0m
+[0;32mI (188) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (189) app_init: Application information:[0m
+[0;32mI (189) app_init: Project name:     esp32_ampermeter_display[0m
+[0;32mI (194) app_init: App version:      fc86329-dirty[0m
+[0;32mI (198) app_init: Compile time:     Oct 19 2025 23:17:55[0m
+[0;32mI (203) app_init: ELF file SHA256:  bb63e6be5...[0m
+[0;32mI (208) app_init: ESP-IDF:          v5.5[0m
+[0;32mI (211) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (215) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (219) efuse_init: Chip rev:         v1.1[0m
+[0;32mI (223) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (229) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (234) heap_init: At 3FFB2CE8 len 0002D318 (180 KiB): DRAM[0m
+[0;32mI (240) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (245) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (251) heap_init: At 4008E00C len 00011FF4 (71 KiB): IRAM[0m
+[0;32mI (257) spi_flash: detected chip: generic[0m
+[0;32mI (259) spi_flash: flash io: dio[0m
+[0;33mW (262) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (275) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (283) main_task: Started on CPU0[0m
+[0;32mI (293) main_task: Calling app_main()[0m
+[0;32mI (293) TANG_NANO: === Tang Nano 9K Power Monitor ===[0m
+[0;32mI (293) TANG_NANO: Starting application...[0m
+[0;32mI (293) TANG_NANO: Relay initialized on GPIO15[0m
+[0;32mI (293) TANG_NANO: Button initialized on GPIO5 (with pull-up)[0m
+[0;32mI (303) TANG_NANO: ADC initialized for ACS712-20A on GPIO34[0m
+[0;32mI (313) TANG_NANO: UART initialized: TX=GPIO17, RX=GPIO16, Baud=115200[0m
+[0;32mI (313) TANG_NANO: AC current monitoring task started[0m
+I BOD: Brownout detector was triggered
+
+
+[0;32mI (13) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (13) boot: compile time Oct 19 2025 23:17:59[0m
+[0;32mI (13) boot: Multicore bootloader[0m
+[0;32mI (13) boot: chip revision: v1.1[0m
+[0;32mI (16) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (19) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (23) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (27) boot: Enabling RNG early entropy source...[0m
+[0;32mI (31) boot: Partition Table:[0m
+[0;32mI (34) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (40) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (46) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (53) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (60) boot: End of partition table[0m
+[0;32mI (63) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0badch ( 47836) map[0m
+[0;32mI (87) esp_image: segment 1: paddr=0001bb04 vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (87) esp_image: segment 2: paddr=0001bb2c vaddr=3ffb0000 size=023e8h (  9192) load[0m
+[0;32mI (94) esp_image: segment 3: paddr=0001df1c vaddr=40080000 size=020fch (  8444) load[0m
+[0;32mI (101) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=1afd8h (110552) map[0m
+[0;32mI (143) esp_image: segment 5: paddr=0003b000 vaddr=400820fc size=0bf10h ( 48912) load[0m
+[0;32mI (169) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (169) boot: Disabling RNG early entropy source...[0m
+[0;32mI (180) cpu_start: Multicore app[0m
+[0;32mI (188) cpu_start: Pro cpu start user code[0m
+[0;32mI (188) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (188) app_init: Application information:[0m
+[0;32mI (188) app_init: Project name:     esp32_ampermeter_display[0m
+[0;32mI (194) app_init: App version:      fc86329-dirty[0m
+[0;32mI (198) app_init: Compile time:     Oct 19 2025 23:17:55[0m
+[0;32mI (203) app_init: ELF file SHA256:  bb63e6be5...[0m
+[0;32mI (207) app_init: ESP-IDF:          v5.5[0m
+[0;32mI (211) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (215) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (219) efuse_init: Chip rev:         v1.1[0m
+[0;32mI (223) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (229) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (234) heap_init: At 3FFB2CE8 len 0002D318 (180 KiB): DRAM[0m
+[0;32mI (239) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (245) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (250) heap_init: At 4008E00C len 00011FF4 (71 KiB): IRAM[0m
+[0;32mI (257) spi_flash: detected chip: generic[0m
+[0;32mI (259) spi_flash: flash io: dio[0m
+[0;33mW (262) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (274) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (282) main_task: Started on CPU0[0m
+[0;32mI (292) main_task: Calling app_main()[0m
+[0;32mI (292) TANG_NANO: === Tang Nano 9K Power Monitor ===[0m
+[0;32mI (292) TANG_NANO: Starting application...[0m
+[0;32mI (292) TANG_NANO: Relay initialized on GPIO15[0m
+[0;32mI (292) TANG_NANO: Button initialized on GPIO5 (with pull-up)[0m
+[0;32mI (302) TANG_NANO: ADC initialized for ACS712-20A on GPIOI BOD: Brownout detector was triggered[0m
+
+
+[0;32mI (13) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (13) boot: compile time Oct 19 2025 23:17:59[0m
+[0;32mI (13) boot: Multicore bootloader[0m
+[0;32mI (13) boot: chip revision: v1.1[0m
+[0;32mI (16) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (19) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (23) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (27) boot: Enabling RNG early entropy source...[0m
+[0;32mI (31) boot: Partition Table:[0m
+[0;32mI (34) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (40) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (46) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (53) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (60) boot: End of partition table[0m
+[0;32mI (63) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0badch ( 47836) map[0m
+[0;32mI (87) esp_image: segment 1: paddr=0001bb04 vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (87) esp_image: segment 2: paddr=0001bb2c vaddr=3ffb0000 size=023e8h (  9192) load[0m
+[0;32mI (94) esp_image: segment 3: paddr=0001df1c vaddr=40080000 size=020fch (  8444) load[0m
+[0;32mI (101) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=1afd8h (110552) map[0m
+[0;32mI (143) esp_image: segment 5: paddr=0003b000 vaddr=400820fc size=0bf10h ( 48912) load[0m
+[0;32mI (169) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (169) boot: Disabling RNG early entropy source...[0m
+[0;32mI (180) cpu_start: Multicore app[0m
+[0;32mI (188) cpu_start: Pro cpu start user code[0m
+[0;32mI (188) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (188) app_init: Application information:[0m
+[0;32mI (188) app_init: Project name:     esp32_ampermeter_display[0m
+[0;32mI (194) app_init: App version:      fc86329-dirty[0m
+[0;32mI (198) app_init: Compile time:     Oct 19 2025 23:17:55[0m
+[0;32mI (203) app_init: ELF file SHA256:  bb63e6be5...[0m
+[0;32mI (207) app_init: ESP-IDF:          v5.5[0m
+[0;32mI (211) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (215) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (219) efuse_init: Chip rev:         v1.1[0m
+[0;32mI (223) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (229) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (234) heap_init: At 3FFB2CE8 len 0002D318 (180 KiB): DRAM[0m
+[0;32mI (239) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (245) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (250) heap_init: At 4008E00C len 00011FF4 (71 KiB): IRAM[0m
+[0;32mI (257) spi_flash: detected chip: generic[0m
+[0;32mI (259) spi_flash: flash io: dio[0m
+[0;33mW (262) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (274) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (282) main_task: Started on CPU0[0m
+[0;32mI (292) main_task: Calling app_main()[0m
+[0;32mI (292) TANG_NANO: === Tang Nano 9K Power Monitor ===[0m
+[0;32mI (292) TANG_NANO: Starting application...[0m
+[0;32mI (292) TANG_NANO: Relay initialized on GPIO15[0m
+[0;32mI (292) TANG_NANO: Button initialized on GPIO5 (with pulI BOD: Brownout detector was triggered[0m
+
+
+[0;32mI (13) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (13) boot: compile time Oct 19 2025 23:17:59[0m
+[0;32mI (13) boot: Multicore bootloader[0m
+[0;32mI (13) boot: chip revision: v1.1[0m
+[0;32mI (16) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (19) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (23) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (27) boot: Enabling RNG early entropy source...[0m
+[0;32mI (31) boot: Partition Table:[0m
+[0;32mI (34) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (40) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (46) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (53) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (60) boot: End of partition table[0m
+[0;32mI (63) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0badch ( 47836) map[0m
+[0;32mI (87) esp_image: segment 1: paddr=0001bb04 vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (87) esp_image: segment 2: paddr=0001bb2c vaddr=3ffb0000 size=023e8h (  9192) load[0m
+[0;32mI (94) esp_image: segment 3: paddr=0001df1c vaddr=40080000 size=020fch (  8444) load[0m
+[0;32mI (101) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=1afd8h (110552) map[0m
+[0;32mI (143) esp_image: segment 5: paddr=0003b000 vaddr=400820fc size=0bf10h ( 48912) load[0m
+[0;32mI (169) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (169) boot: Disabling RNG early entropy source...[0m
+[0;32mI (180) cpu_start: Multicore app[0m
+[0;32mI (188) cpu_start: Pro cpu start user code[0m
+[0;32mI (188) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (188) app_init: Application information:[0m
+[0;32mI (188) app_init: Project name:     esp32_ampermeter_display[0m
+[0;32mI (194) app_init: App version:      fc86329-dirty[0m
+[0;32mI (198) app_init: Compile time:     Oct 19 2025 23:17:55[0m
+[0;32mI (203) app_init: ELF file SHA256:  bb63e6be5...[0m
+[0;32mI (207) app_init: ESP-IDF:          v5.5[0m
+[0;32mI (211) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (215) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (219) efuse_init: Chip rev:         v1.1[0m
+[0;32mI (223) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (229) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (234) heap_init: At 3FFB2CE8 len 0002D318 (180 KiB): DRAM[0m
+[0;32mI (239) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (245) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (250) heap_init: At 4008E00C len 00011FF4 (71 KiB): IRAM[0m
+[0;32mI (257) spi_flash: detected chip: generic[0m
+[0;32mI (259) spi_flash: flash io: dio[0m
+[0;33mW (262) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (274) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (282) main_task: Started on CPU0[0m
+[0;32mI (292) main_task: Calling app_main()[0m
+[0;32mI (292) TANG_NANO: === Tang Nano 9K Power Monitor ===[0m
+[0;32mI (292) TANG_NANO: Starting application...[0m
+[0;32mI (292) TANG_NANO: Relay initialized on GPIO15[0m
+[0;32mI (292) TANG_NANO: Button initialized on GPIO5 (with pI BOD: Brownout detector was triggered[0m
+
+
+[0;32mI (13) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (13) boot: compile time Oct 19 2025 23:17:59[0m
+[0;32mI (13) boot: Multicore bootloader[0m
+[0;32mI (13) boot: chip revision: v1.1[0m
+[0;32mI (16) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (19) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (23) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (27) boot: Enabling RNG early entropy source...[0m
+[0;32mI (31) boot: Partition Table:[0m
+[0;32mI (34) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (40) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (46) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (53) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (60) boot: End of partition table[0m
+[0;32mI (63) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0badch ( 47836) map[0m
+[0;32mI (87) esp_image: segment 1: paddr=0001bb04 vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (87) esp_image: segment 2: paddr=0001bb2c vaddr=3ffb0000 size=023e8h (  9192) load[0m
+[0;32mI (94) esp_image: segment 3: paddr=0001df1c vaddr=40080000 size=020fch (  8444) load[0m
+[0;32mI (101) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=1afd8h (110552) map[0m
+[0;32mI (143) esp_image: segment 5: paddr=0003b000 vaddr=400820fc size=0bf10h ( 48912) load[0m
+[0;32mI (169) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (169) boot: Disabling RNG early entropy source...[0m
+[0;32mI (180) cpu_start: Multicore app[0m
+[0;32mI (188) cpu_start: Pro cpu start user code[0m
+[0;32mI (188) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (188) app_init: Application information:[0m
+[0;32mI (188) app_init: Project name:     esp32_ampermeter_display[0m
+[0;32mI (194) app_init: App version:      fc86329-dirty[0m
+[0;32mI (198) app_init: Compile time:     Oct 19 2025 23:17:55[0m
+[0;32mI (203) app_init: ELF file SHA256:  bb63e6be5...[0m
+[0;32mI (207) app_init: ESP-IDF:          v5.5[0m
+[0;32mI (211) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (215) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (219) efuse_init: Chip rev:         v1.1[0m
+[0;32mI (223) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (229) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (234) heap_init: At 3FFB2CE8 len 0002D318 (180 KiB): DRAM[0m
+[0;32mI (239) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (245) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (250) heap_init: At 4008E00C len 00011FF4 (71 KiB): IRAM[0m
+[0;32mI (257) spi_flash: detected chip: generic[0m
+[0;32mI (259) spi_flash: flash io: dio[0m
+[0;33mW (262) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (274) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (282) main_task: Started on CPU0[0m
+[0;32mI (292) main_task: Calling app_main()[0m
+[0;32mI (292) TANG_NANO: === Tang Nano 9K Power Monitor ===[0m
+[0;32mI (292) TANG_NANO: Starting application...[0m
+[0;32mI (292) TANG_NANO: Relay initialized on GPIO15[0m
+[0;32mI (292) TANG_NANO: Button initialized on GPIO5 (with pull-up)[0m
+[0;32mI (302) TANG_NANO: ADC initialized for ACS712-20A on GPIO34[0m
+[0;32mI (312) TANG_NANI BOD: Brownout detector was triggered[0m
+
+
+[0;32mI (13) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (13) boot: compile time Oct 19 2025 23:17:59[0m
+[0;32mI (13) boot: Multicore bootloader[0m
+[0;32mI (13) boot: chip revision: v1.1[0m
+[0;32mI (16) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (19) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (23) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (27) boot: Enabling RNG early entropy source...[0m
+[0;32mI (31) boot: Partition Table:[0m
+[0;32mI (34) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (40) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (46) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (53) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (60) boot: End of partition table[0m
+[0;32mI (63) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0badch ( 47836) map[0m
+[0;32mI (87) esp_image: segment 1: paddr=0001bb04 vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (87) esp_image: segment 2: paddr=0001bb2c vaddr=3ffb0000 size=023e8h (  9192) load[0m
+[0;32mI (94) esp_image: segment 3: paddr=0001df1c vaddr=40080000 size=020fch (  8444) load[0m
+[0;32mI (101) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=1afd8h (110552) map[0m
+[0;32mI (143) esp_image: segment 5: paddr=0003b000 vaddr=400820fc size=0bf10h ( 48912) load[0m
+[0;32mI (169) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (169) boot: Disabling RNG early entropy source...[0m
+[0;32mI (180) cpu_start: Multicore app[0m
+[0;32mI (188) cpu_start: Pro cpu start user code[0m
+[0;32mI (188) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (188) app_init: Application information:[0m
+[0;32mI (188) app_init: Project name:     esp32_ampermeter_display[0m
+[0;32mI (194) app_init: App version:      fc86329-dirty[0m
+[0;32mI (198) app_init: Compile time:     Oct 19 2025 23:17:55[0m
+[0;32mI (203) app_init: ELF file SHA256:  bb63e6be5...[0m
+[0;32mI (207) app_init: ESP-IDF:          v5.5[0m
+[0;32mI (211) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (215) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (219) efuse_init: Chip rev:         v1.1[0m
+[0;32mI (223) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (229) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (234) heap_init: At 3FFB2CE8 len 0002D318 (180 KiB): DRAM[0m
+[0;32mI (239) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (245) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (250) heap_init: At 4008E00C len 00011FF4 (71 KiB): IRAM[0m
+[0;32mI (257) spi_flash: detected chip: generic[0m
+[0;32mI (259) spi_flash: flash io: dio[0m
+[0;33mW (262) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (274) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (282) main_task: Started on CPU0[0m
+[0;32mI (292) main_task: Calling app_main()[0m
+[0;32mI (292) TANG_NANO: === Tang Nano 9K Power Monitor ===[0m
+[0;32mI (292) TANG_NANO: Starting application...[0m
+[0;32mI (292) TANG_NANO: Relay initialized on GPIO15[0m
+[0;32mI (292) TANG_NANO: Button initialized on GPIO5 I BOD: Brownout detector was triggered[0m
+
+
+[0;32mI (13) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (13) boot: compile time Oct 19 2025 23:17:59[0m
+[0;32mI (13) boot: Multicore bootloader[0m
+[0;32mI (13) boot: chip revision: v1.1[0m
+[0;32mI (16) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (19) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (23) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (27) boot: Enabling RNG early entropy source...[0m
+[0;32mI (31) boot: Partition Table:[0m
+[0;32mI (34) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (40) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (46) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (53) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (60) boot: End of partition table[0m
+[0;32mI (63) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0badch ( 47836) map[0m
+[0;32mI (87) esp_image: segment 1: paddr=0001bb04 vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (87) esp_image: segment 2: paddr=0001bb2c vaddr=3ffb0000 size=023e8h (  9192) load[0m
+[0;32mI (94) esp_image: segment 3: paddr=0001df1c vaddr=40080000 size=020fch (  8444) load[0m
+[0;32mI (101) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=1afd8h (110552) map[0m
+[0;32mI (143) esp_image: segment 5: paddr=0003b000 vaddr=400820fc size=0bf10h ( 48912) load[0m
+[0;32mI (169) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (169) boot: Disabling RNG early entropy source...[0m
+[0;32mI (180) cpu_start: Multicore app[0m
+[0;32mI (188) cpu_start: Pro cpu start user code[0m
+[0;32mI (188) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (188) app_init: Application information:[0m
+[0;32mI (188) app_init: Project name:     esp32_ampermeter_display[0m
+[0;32mI (194) app_init: App version:      fc86329-dirty[0m
+[0;32mI (198) app_init: Compile time:     Oct 19 2025 23:17:55[0m
+[0;32mI (203) app_init: ELF file SHA256:  bb63e6be5...[0m
+[0;32mI (207) app_init: ESP-IDF:          v5.5[0m
+[0;32mI (211) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (215) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (219) efuse_init: Chip rev:         v1.1[0m
+[0;32mI (223) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (229) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (234) heap_init: At 3FFB2CE8 len 0002D318 (180 KiB): DRAM[0m
+[0;32mI (239) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (245) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (250) heap_init: At 4008E00C len 00011FF4 (71 KiB): IRAM[0m
+[0;32mI (257) spi_flash: detected chip: generic[0m
+[0;32mI (259) spi_flash: flash io: dio[0m
+[0;33mW (262) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (274) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (282) main_task: Started on CPU0[0m
+[0;32mI (292) main_task: Calling app_main()[0m
+[0;32mI (292) TANG_NANO: === Tang Nano 9K Power Monitor ===[0m
+[0;32mI (292) TANG_NANO: Starting application...[0m
+[0;32mI (292) TANG_NANO: Relay initialized on GPIO15[0m
+[0;32mI (292) TANG_NANO: Button initialized on GPIO5 (wiI BOD: Brownout detector was triggered[0m
+
+
+[0;32mI (13) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (13) boot: compile time Oct 19 2025 23:17:59[0m
+[0;32mI (13) boot: Multicore bootloader[0m
+[0;32mI (13) boot: chip revision: v1.1[0m
+[0;32mI (16) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (19) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (23) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (27) boot: Enabling RNG early entropy source...[0m
+[0;32mI (31) boot: Partition Table:[0m
+[0;32mI (34) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (40) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (46) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (53) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (60) boot: End of partition table[0m
+[0;32mI (63) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0badch ( 47836) map[0m
+[0;32mI (87) esp_image: segment 1: paddr=0001bb04 vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (87) esp_image: segment 2: paddr=0001bb2c vaddr=3ffb0000 size=023e8h (  9192) load[0m
+[0;32mI (94) esp_image: segment 3: paddr=0001df1c vaddr=40080000 size=020fch (  8444) load[0m
+[0;32mI (101) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=1afd8h (110552) map[0m
+[0;32mI (143) esp_image: segment 5: paddr=0003b000 vaddr=400820fc size=0bf10h ( 48912) load[0m
+[0;32mI (169) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (169) boot: Disabling RNG early entropy source...[0m
+[0;32mI (180) cpu_start: Multicore app[0m
+[0;32mI (188) cpu_start: Pro cpu start user code[0m
+[0;32mI (188) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (188) app_init: Application information:[0m
+[0;32mI (188) app_init: Project name:     esp32_ampermeter_display[0m
+[0;32mI (194) app_init: App version:      fc86329-dirty[0m
+[0;32mI (198) app_init: Compile time:     Oct 19 2025 23:17:55[0m
+[0;32mI (203) app_init: ELF file SHA256:  bb63e6be5...[0m
+[0;32mI (207) app_init: ESP-IDF:          v5.5[0m
+[0;32mI (211) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (215) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (219) efuse_init: Chip rev:         v1.1[0m
+[0;32mI (223) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (229) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (234) heap_init: At 3FFB2CE8 len 0002D318 (180 KiB): DRAM[0m
+[0;32mI (239) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (245) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (250) heap_init: At 4008E00C len 00011FF4 (71 KiB): IRAM[0m
+[0;32mI (257) spi_flash: detected chip: generic[0m
+[0;32mI (259) spi_flash: flash io: dio[0m
+[0;33mW (262) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (274) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (282) main_task: Started on CPU0[0m
+[0;32mI (292) main_task: Calling app_main()[0m
+[0;32mI (292) TANG_NANO: === Tang Nano 9K Power Monitor ===[0m
+[0;32mI (292) TANG_NANO: Starting application...[0m
+[0;32mI (292) TANG_NANO: Relay initialized on GPIO15[0m
+[0;32mI (292) TANG_NANO: Button initialized on GPIO5 (wiI BOD: Brownout detector was triggered[0m
+
+
+[0;32mI (13) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (13) boot: compile time Oct 19 2025 23:17:59[0m
+[0;32mI (13) boot: Multicore bootloader[0m
+[0;32mI (13) boot: chip revision: v1.1[0m
+[0;32mI (16) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (19) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (23) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (27) boot: Enabling RNG early entropy source...[0m
+[0;32mI (31) boot: Partition Table:[0m
+[0;32mI (34) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (40) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (46) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (53) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (60) boot: End of partition table[0m
+[0;32mI (63) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0badch ( 47836) map[0m
+[0;32mI (87) esp_image: segment 1: paddr=0001bb04 vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (87) esp_image: segment 2: paddr=0001bb2c vaddr=3ffb0000 size=023e8h (  9192) load[0m
+[0;32mI (94) esp_image: segment 3: paddr=0001df1c vaddr=40080000 size=020fch (  8444) load[0m
+[0;32mI (101) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=1afd8h (110552) map[0m
+[0;32mI (143) esp_image: segment 5: paddr=0003b000 vaddr=400820fc size=0bf10h ( 48912) load[0m
+[0;32mI (169) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (169) boot: Disabling RNG early entropy source...[0m
+[0;32mI (180) cpu_start: Multicore app[0m
+[0;32mI (188) cpu_start: Pro cpu start user code[0m
+[0;32mI (188) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (188) app_init: Application information:[0m
+[0;32mI (188) app_init: Project name:     esp32_ampermeter_display[0m
+[0;32mI (194) app_init: App version:      fc86329-dirty[0m
+[0;32mI (198) app_init: Compile time:     Oct 19 2025 23:17:55[0m
+[0;32mI (203) app_init: ELF file SHA256:  bb63e6be5...[0m
+[0;32mI (207) app_init: ESP-IDF:          v5.5[0m
+[0;32mI (211) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (215) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (219) efuse_init: Chip rev:         v1.1[0m
+[0;32mI (223) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (229) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (234) heap_init: At 3FFB2CE8 len 0002D318 (180 KiB): DRAM[0m
+[0;32mI (239) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (245) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (250) heap_init: At 4008E00C len 00011FF4 (71 KiB): IRAM[0m
+[0;32mI (257) spi_flash: detected chip: generic[0m
+[0;32mI (259) spi_flash: flash io: dio[0m
+[0;33mW (262) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (274) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (282) main_task: Started on CPU0[0m
+[0;32mI (292) main_task: Calling app_main()[0m
+[0;32mI (292) TANG_NANO: === Tang Nano 9K Power Monitor ===[0m
+[0;32mI (292) TANG_NANO: Starting application...[0m
+[0;32mI (292) TANG_NANO: Relay initialized on GPIO15[0m
+[0;32mI (292) TANG_NANO: Button initialized on GPIO5 (with puI BOD: Brownout detector was triggered[0m
+
+
+[0;32mI (13) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (13) boot: compile time Oct 19 2025 23:17:59[0m
+[0;32mI (13) boot: Multicore bootloader[0m
+[0;32mI (13) boot: chip revision: v1.1[0m
+[0;32mI (16) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (19) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (23) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (27) boot: Enabling RNG early entropy source...[0m
+[0;32mI (31) boot: Partition Table:[0m
+[0;32mI (34) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (40) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (46) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (53) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (60) boot: End of partition table[0m
+[0;32mI (63) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0badch ( 47836) map[0m
+[0;32mI (87) esp_image: segment 1: paddr=0001bb04 vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (87) esp_image: segment 2: paddr=0001bb2c vaddr=3ffb0000 size=023e8h (  9192) load[0m
+[0;32mI (94) esp_image: segment 3: paddr=0001df1c vaddr=40080000 size=020fch (  8444) load[0m
+[0;32mI (101) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=1afd8h (110552) map[0m
+[0;32mI (143) esp_image: segment 5: paddr=0003b000 vaddr=400820fc size=0bf10h ( 48912) load[0m
+[0;32mI (169) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (169) boot: Disabling RNG early entropy source...[0m
+[0;32mI (180) cpu_start: Multicore app[0m
+[0;32mI (188) cpu_start: Pro cpu start user code[0m
+[0;32mI (188) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (188) app_init: Application information:[0m
+[0;32mI (188) app_init: Project name:     esp32_ampermeter_display[0m
+[0;32mI (194) app_init: App version:      fc86329-dirty[0m
+[0;32mI (198) app_init: Compile time:     Oct 19 2025 23:17:55[0m
+[0;32mI (203) app_init: ELF file SHA256:  bb63e6be5...[0m
+[0;32mI (207) app_init: ESP-IDF:          v5.5[0m
+[0;32mI (211) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (215) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (219) efuse_init: Chip rev:         v1.1[0m
+[0;32mI (223) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (229) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (234) heap_init: At 3FFB2CE8 len 0002D318 (180 KiB): DRAM[0m
+[0;32mI (239) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (245) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (250) heap_init: At 4008E00C len 00011FF4 (71 KiB): IRAM[0m
+[0;32mI (257) spi_flash: detected chip: generic[0m
+[0;32mI (259) spi_flash: flash io: dio[0m
+[0;33mW (262) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (274) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (282) main_task: Started on CPU0[0m
+[0;32mI (292) main_task: Calling app_main()[0m
+[0;32mI (292) TANG_NANO: === Tang Nano 9K Power Monitor ===[0m
+[0;32mI (292) TANG_NANO: Starting application...[0m
+[0;32mI (292) TANG_NANO: Relay initialized on GPIO15[0m
+[0;32mI (292) TANG_NANO: Button initialized on GPIO5 (with pull-up)[0m
+[0;32mI (302) TANG_NANO: ADC initialized for ACS712-20A on GPIO34[0m
+[0;32mI (312) TANG_NANI BOD: Brownout detector was triggered[0m
+
+
+[0;32mI (13) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (13) boot: compile time Oct 19 2025 23:17:59[0m
+[0;32mI (13) boot: Multicore bootloader[0m
+[0;32mI (13) boot: chip revision: v1.1[0m
+[0;32mI (16) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (19) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (23) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (27) boot: Enabling RNG early entropy source...[0m
+[0;32mI (31) boot: Partition Table:[0m
+[0;32mI (34) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (40) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (46) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (53) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (60) boot: End of partition table[0m
+[0;32mI (63) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0badch ( 47836) map[0m
+[0;32mI (87) esp_image: segment 1: paddr=0001bb04 vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (87) esp_image: segment 2: paddr=0001bb2c vaddr=3ffb0000 size=023e8h (  9192) load[0m
+[0;32mI (94) esp_image: segment 3: paddr=0001df1c vaddr=40080000 size=020fch (  8444) load[0m
+[0;32mI (101) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=1afd8h (110552) map[0m
+[0;32mI (143) esp_image: segment 5: paddr=0003b000 vaddr=400820fc size=0bf10h ( 48912) load[0m
+[0;32mI (169) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (169) boot: Disabling RNG early entropy source...[0m
+[0;32mI (180) cpu_start: Multicore app[0m
+[0;32mI (188) cpu_start: Pro cpu start user code[0m
+[0;32mI (188) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (188) app_init: Application information:[0m
+[0;32mI (188) app_init: Project name:     esp32_ampermeter_display[0m
+[0;32mI (194) app_init: App version:      fc86329-dirty[0m
+[0;32mI (198) app_init: Compile time:     Oct 19 2025 23:17:55[0m
+[0;32mI (203) app_init: ELF file SHA256:  bb63e6be5...[0m
+[0;32mI (207) app_init: ESP-IDF:          v5.5[0m
+[0;32mI (211) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (215) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (219) efuse_init: Chip rev:         v1.1[0m
+[0;32mI (223) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (229) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (234) heap_init: At 3FFB2CE8 len 0002D318 (180 KiB): DRAM[0m
+[0;32mI (239) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (245) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (250) heap_init: At 4008E00C len 00011FF4 (71 KiB): IRAM[0m
+[0;32mI (257) spi_flash: detected chip: generic[0m
+[0;32mI (259) spi_flash: flash io: dio[0m
+[0;33mW (262) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (274) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (282) main_task: Started on CPU0[0m
+[0;32mI (292) main_task: Calling app_main()[0m
+[0;32mI (292) TANG_NANO: === Tang Nano 9K Power Monitor ===[0m
+[0;32mI (292) TANG_NANO: Starting application...[0m
+[0;32mI (292) TANG_NANO: Relay initialized on GPIO15[0m
+[0;32mI (292) TANG_NANO: Button initialized on GPIO5 (with pull-up)[0m
+[0;32mI (302) TANG_NANO: ADC initialiI BOD: Brownout detector was triggered[0m
+
+
+[0;32mI (13) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (13) boot: compile time Oct 19 2025 23:17:59[0m
+[0;32mI (13) boot: Multicore bootloader[0m
+[0;32mI (13) boot: chip revision: v1.1[0m
+[0;32mI (16) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (19) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (23) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (27) boot: Enabling RNG early entropy source...[0m
+[0;32mI (31) boot: Partition Table:[0m
+[0;32mI (34) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (40) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (46) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (53) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (60) boot: End of partition table[0m
+[0;32mI (63) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0badch ( 47836) map[0m
+[0;32mI (87) esp_image: segment 1: paddr=0001bb04 vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (87) esp_image: segment 2: paddr=0001bb2c vaddr=3ffb0000 size=023e8h (  9192) load[0m
+[0;32mI (94) esp_image: segment 3: paddr=0001df1c vaddr=40080000 size=020fch (  8444) load[0m
+[0;32mI (101) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=1afd8h (110552) map[0m
+[0;32mI (143) esp_image: segment 5: paddr=0003b000 vaddr=400820fc size=0bf10h ( 48912) load[0m
+[0;32mI (169) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (169) boot: Disabling RNG early entropy source...[0m
+[0;32mI (180) cpu_start: Multicore app[0m
+[0;32mI (188) cpu_start: Pro cpu start user code[0m
+[0;32mI (188) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (188) app_init: Application information:[0m
+[0;32mI (188) app_init: Project name:     esp32_ampermeter_display[0m
+[0;32mI (194) app_init: App version:      fc86329-dirty[0m
+[0;32mI (198) app_init: Compile time:     Oct 19 2025 23:17:55[0m
+[0;32mI (203) app_init: ELF file SHA256:  bb63e6be5...[0m
+[0;32mI (207) app_init: ESP-IDF:          v5.5[0m
+[0;32mI (211) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (215) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (219) efuse_init: Chip rev:         v1.1[0m
+[0;32mI (223) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (229) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (234) heap_init: At 3FFB2CE8 len 0002D318 (180 KiB): DRAM[0m
+[0;32mI (239) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (245) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (250) heap_init: At 4008E00C len 00011FF4 (71 KiB): IRAM[0m
+[0;32mI (257) spi_flash: detected chip: generic[0m
+[0;32mI (259) spi_flash: flash io: dio[0m
+[0;33mW (262) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (274) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (282) main_task: Started on CPU0[0m
+[0;32mI (292) main_task: Calling app_main()[0m
+[0;32mI (292) TANG_NANO: === Tang Nano 9K Power Monitor ===[0m
+[0;32mI (292) TANG_NANO: Starting application...[0m
+[0;32mI (292) TANG_NANO: Relay initialized on GPIO15[0m
+[0;32mI (292) TANG_NANO: Button initialized on GPIOI BOD: Brownout detector was triggered[0m
+
+
+[0;32mI (13) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (13) boot: compile time Oct 19 2025 23:17:59[0m
+[0;32mI (13) boot: Multicore bootloader[0m
+[0;32mI (13) boot: chip revision: v1.1[0m
+[0;32mI (16) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (19) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (23) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (27) boot: Enabling RNG early entropy source...[0m
+[0;32mI (31) boot: Partition Table:[0m
+[0;32mI (34) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (40) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (46) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (53) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (60) boot: End of partition table[0m
+[0;32mI (63) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0badch ( 47836) map[0m
+[0;32mI (87) esp_image: segment 1: paddr=0001bb04 vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (87) esp_image: segment 2: paddr=0001bb2c vaddr=3ffb0000 size=023e8h (  9192) load[0m
+[0;32mI (94) esp_image: segment 3: paddr=0001df1c vaddr=40080000 size=020fch (  8444) load[0m
+[0;32mI (101) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=1afd8h (110552) map[0m
+[0;32mI (143) esp_image: segment 5: paddr=0003b000 vaddr=400820fc size=0bf10h ( 48912) load[0m
+[0;32mI (169) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (169) boot: Disabling RNG early entropy source...[0m
+[0;32mI (180) cpu_start: Multicore app[0m
+[0;32mI (188) cpu_start: Pro cpu start user code[0m
+[0;32mI (188) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (188) app_init: Application information:[0m
+[0;32mI (188) app_init: Project name:     esp32_ampermeter_display[0m
+[0;32mI (194) app_init: App version:      fc86329-dirty[0m
+[0;32mI (198) app_init: Compile time:     Oct 19 2025 23:17:55[0m
+[0;32mI (203) app_init: ELF file SHA256:  bb63e6be5...[0m
+[0;32mI (207) app_init: ESP-IDF:          v5.5[0m
+[0;32mI (211) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (215) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (219) efuse_init: Chip rev:         v1.1[0m
+[0;32mI (223) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (229) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (234) heap_init: At 3FFB2CE8 len 0002D318 (180 KiB): DRAM[0m
+[0;32mI (239) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (245) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (250) heap_init: At 4008E00C len 00011FF4 (71 KiB): IRAM[0m
+[0;32mI (257) spi_flash: detected chip: generic[0m
+[0;32mI (259) spi_flash: flash io: dio[0m
+[0;33mW (262) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (274) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (282) main_task: Started on CPU0[0m
+[0;32mI (292) main_task: Calling app_main()[0m
+[0;32mI (292) TANG_NANO: === Tang Nano 9K Power Monitor ===[0m
+[0;32mI (292) TANG_NANO: Starting application...[0m
+[0;32mI (292) TANG_NANO: Relay initialized on GPIO15[0m
+[0;32mI (292) TANG_NANO: Button initialized on GPIO5 (withI BOD: Brownout detector was triggered[0m
+
+
+[0;32mI (13) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (13) boot: compile time Oct 19 2025 23:17:59[0m
+[0;32mI (13) boot: Multicore bootloader[0m
+[0;32mI (13) boot: chip revision: v1.1[0m
+[0;32mI (16) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (19) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (23) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (27) boot: Enabling RNG early entropy source...[0m
+[0;32mI (31) boot: Partition Table:[0m
+[0;32mI (34) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (40) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (46) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (53) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (60) boot: End of partition table[0m
+[0;32mI (63) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0badch ( 47836) map[0m
+[0;32mI (87) esp_image: segment 1: paddr=0001bb04 vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (87) esp_image: segment 2: paddr=0001bb2c vaddr=3ffb0000 size=023e8h (  9192) load[0m
+[0;32mI (94) esp_image: segment 3: paddr=0001df1c vaddr=40080000 size=020fch (  8444) load[0m
+[0;32mI (101) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=1afd8h (110552) map[0m
+[0;32mI (143) esp_image: segment 5: paddr=0003b000 vaddr=400820fc size=0bf10h ( 48912) load[0m
+[0;32mI (169) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (169) boot: Disabling RNG early entropy source...[0m
+[0;32mI (180) cpu_start: Multicore app[0m
+[0;32mI (188) cpu_start: Pro cpu start user code[0m
+[0;32mI (188) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (188) app_init: Application information:[0m
+[0;32mI (188) app_init: Project name:     esp32_ampermeter_display[0m
+[0;32mI (194) app_init: App version:      fc86329-dirty[0m
+[0;32mI (198) app_init: Compile time:     Oct 19 2025 23:17:55[0m
+[0;32mI (203) app_init: ELF file SHA256:  bb63e6be5...[0m
+[0;32mI (207) app_init: ESP-IDF:          v5.5[0m
+[0;32mI (211) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (215) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (219) efuse_init: Chip rev:         v1.1[0m
+[0;32mI (223) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (229) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (234) heap_init: At 3FFB2CE8 len 0002D318 (180 KiB): DRAM[0m
+[0;32mI (239) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (245) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (250) heap_init: At 4008E00C len 00011FF4 (71 KiB): IRAM[0m
+[0;32mI (257) spi_flash: detected chip: generic[0m
+[0;32mI (259) spi_flash: flash io: dio[0m
+[0;33mW (262) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (274) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (282) main_task: Started on CPU0[0m
+[0;32mI (292) main_task: Calling app_main()[0m
+[0;32mI (292) TANG_NANO: === Tang Nano 9K Power Monitor ===[0m
+[0;32mI (292) TANG_NANO: Starting application...[0m
+[0;32mI (292) TANG_NANO: Relay initialized on GPIO15[0m
+[0;32mI (292) TANG_NANO: Button initialized on GPIO5 (witI BOD: Brownout detector was triggered[0m
+
+
+[0;32mI (13) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (13) boot: compile time Oct 19 2025 23:17:59[0m
+[0;32mI (13) boot: Multicore bootloader[0m
+[0;32mI (13) boot: chip revision: v1.1[0m
+[0;32mI (16) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (19) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (23) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (27) boot: Enabling RNG early entropy source...[0m
+[0;32mI (31) boot: Partition Table:[0m
+[0;32mI (34) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (40) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (46) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (53) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (60) boot: End of partition table[0m
+[0;32mI (63) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0badch ( 47836) map[0m
+[0;32mI (87) esp_image: segment 1: paddr=0001bb04 vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (87) esp_image: segment 2: paddr=0001bb2c vaddr=3ffb0000 size=023e8h (  9192) load[0m
+[0;32mI (94) esp_image: segment 3: paddr=0001df1c vaddr=40080000 size=020fch (  8444) load[0m
+[0;32mI (101) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=1afd8h (110552) map[0m
+[0;32mI (143) esp_image: segment 5: paddr=0003b000 vaddr=400820fc size=0bf10h ( 48912) load[0m
+[0;32mI (169) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (169) boot: Disabling RNG early entropy source...[0m
+[0;32mI (180) cpu_start: Multicore app[0m
+[0;32mI (188) cpu_start: Pro cpu start user code[0m
+[0;32mI (188) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (188) app_init: Application information:[0m
+[0;32mI (188) app_init: Project name:     esp32_ampermeter_display[0m
+[0;32mI (194) app_init: App version:      fc86329-dirty[0m
+[0;32mI (198) app_init: Compile time:     Oct 19 2025 23:17:55[0m
+[0;32mI (203) app_init: ELF file SHA256:  bb63e6be5...[0m
+[0;32mI (207) app_init: ESP-IDF:          v5.5[0m
+[0;32mI (211) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (215) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (219) efuse_init: Chip rev:         v1.1[0m
+[0;32mI (223) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (229) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (234) heap_init: At 3FFB2CE8 len 0002D318 (180 KiB): DRAM[0m
+[0;32mI (239) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (245) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (250) heap_init: At 4008E00C len 00011FF4 (71 KiB): IRAM[0m
+[0;32mI (257) spi_flash: detected chip: generic[0m
+[0;32mI (259) spi_flash: flash io: dio[0m
+[0;33mW (262) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (274) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (282) main_task: Started on CPU0[0m
+[0;32mI (292) main_task: Calling app_main()[0m
+[0;32mI (292) TANG_NANO: === Tang Nano 9K Power Monitor ===[0m
+[0;32mI (292) TANG_NANO: Starting application...[0m
+[0;32mI (292) TANG_NANO: Relay initialized on GPIO15[0m
+[0;32mI (292) TANG_NANO: Button initialized on GPIO5 (with I BOD: Brownout detector was triggered[0m
+
+
+[0;32mI (13) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (13) boot: compile time Oct 19 2025 23:17:59[0m
+[0;32mI (13) boot: Multicore bootloader[0m
+[0;32mI (13) boot: chip revision: v1.1[0m
+[0;32mI (16) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (19) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (23) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (27) boot: Enabling RNG early entropy source...[0m
+[0;32mI (31) boot: Partition Table:[0m
+[0;32mI (34) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (40) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (46) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (53) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (60) boot: End of partition table[0m
+[0;32mI (63) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0badch ( 47836) map[0m
+[0;32mI (87) esp_image: segment 1: paddr=0001bb04 vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (87) esp_image: segment 2: paddr=0001bb2c vaddr=3ffb0000 size=023e8h (  9192) load[0m
+[0;32mI (94) esp_image: segment 3: paddr=0001df1c vaddr=40080000 size=020fch (  8444) load[0m
+[0;32mI (101) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=1afd8h (110552) map[0m
+[0;32mI (143) esp_image: segment 5: paddr=0003b000 vaddr=400820fc size=0bf10h ( 48912) load[0m
+[0;32mI (169) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (169) boot: Disabling RNG early entropy source...[0m
+[0;32mI (180) cpu_start: Multicore app[0m
+[0;32mI (188) cpu_start: Pro cpu start user code[0m
+[0;32mI (188) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (188) app_init: Application information:[0m
+[0;32mI (188) app_init: Project name:     esp32_ampermeter_display[0m
+[0;32mI (194) app_init: App version:      fc86329-dirty[0m
+[0;32mI (198) app_init: Compile time:     Oct 19 2025 23:17:55[0m
+[0;32mI (203) app_init: ELF file SHA256:  bb63e6be5...[0m
+[0;32mI (207) app_init: ESP-IDF:          v5.5[0m
+[0;32mI (211) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (215) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (219) efuse_init: Chip rev:         v1.1[0m
+[0;32mI (223) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (229) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (234) heap_init: At 3FFB2CE8 len 0002D318 (180 KiB): DRAM[0m
+[0;32mI (239) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (245) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (250) heap_init: At 4008E00C len 00011FF4 (71 KiB): IRAM[0m
+[0;32mI (257) spi_flash: detected chip: generic[0m
+[0;32mI (259) spi_flash: flash io: dio[0m
+[0;33mW (262) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (274) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (282) main_task: Started on CPU0[0m
+[0;32mI (292) main_task: Calling app_main()[0m
+[0;32mI (292) TANG_NANO: === Tang Nano 9K Power Monitor ===[0m
+[0;32mI (292) TANG_NANO: Starting application...[0m
+[0;32mI (292) TANG_NANO: Relay initialized on GPIO15[0m
+[0;32mI (292) TANG_NANO: Button initialized on GPIO5 (wiI BOD: Brownout detector was triggered[0m
+
+
+[0;32mI (13) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (13) boot: compile time Oct 19 2025 23:17:59[0m
+[0;32mI (13) boot: Multicore bootloader[0m
+[0;32mI (13) boot: chip revision: v1.1[0m
+[0;32mI (16) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (19) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (23) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (27) boot: Enabling RNG early entropy source...[0m
+[0;32mI (31) boot: Partition Table:[0m
+[0;32mI (34) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (40) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (46) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (53) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (60) boot: End of partition table[0m
+[0;32mI (63) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0badch ( 47836) map[0m
+[0;32mI (87) esp_image: segment 1: paddr=0001bb04 vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (87) esp_image: segment 2: paddr=0001bb2c vaddr=3ffb0000 size=023e8h (  9192) load[0m
+[0;32mI (94) esp_image: segment 3: paddr=0001df1c vaddr=40080000 size=020fch (  8444) load[0m
+[0;32mI (101) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=1afd8h (110552) map[0m
+[0;32mI (143) esp_image: segment 5: paddr=0003b000 vaddr=400820fc size=0bf10h ( 48912) load[0m
+[0;32mI (169) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (169) boot: Disabling RNG early entropy source...[0m
+[0;32mI (180) cpu_start: Multicore app[0m
+[0;32mI (188) cpu_start: Pro cpu start user code[0m
+[0;32mI (188) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (188) app_init: Application information:[0m
+[0;32mI (188) app_init: Project name:     esp32_ampermeter_display[0m
+[0;32mI (194) app_init: App version:      fc86329-dirty[0m
+[0;32mI (198) app_init: Compile time:     Oct 19 2025 23:17:55[0m
+[0;32mI (203) app_init: ELF file SHA256:  bb63e6be5...[0m
+[0;32mI (207) app_init: ESP-IDF:          v5.5[0m
+[0;32mI (211) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (215) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (219) efuse_init: Chip rev:         v1.1[0m
+[0;32mI (223) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (229) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (234) heap_init: At 3FFB2CE8 len 0002D318 (180 KiB): DRAM[0m
+[0;32mI (239) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (245) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (250) heap_init: At 4008E00C len 00011FF4 (71 KiB): IRAM[0m
+[0;32mI (257) spi_flash: detected chip: generic[0m
+[0;32mI (259) spi_flash: flash io: dio[0m
+[0;33mW (262) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (274) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (282) main_task: Started on CPU0[0m
+[0;32mI (292) main_task: Calling app_main()[0m
+[0;32mI (292) TANG_NANO: === Tang Nano 9K Power Monitor ===[0m
+[0;32mI (292) TANG_NANO: Starting application...[0m
+[0;32mI (292) TANG_NANO: Relay initialized on GPIO15[0m
+[0;32mI (292) TANG_NANO: Button initialized on GPIO5 (wI BOD: Brownout detector was triggered[0m
+
+
+[0;32mI (13) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (13) boot: compile time Oct 19 2025 23:17:59[0m
+[0;32mI (13) boot: Multicore bootloader[0m
+[0;32mI (13) boot: chip revision: v1.1[0m
+[0;32mI (16) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (19) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (23) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (27) boot: Enabling RNG early entropy source...[0m
+[0;32mI (31) boot: Partition Table:[0m
+[0;32mI (34) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (40) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (46) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (53) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (60) boot: End of partition table[0m
+[0;32mI (63) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0badch ( 47836) map[0m
+[0;32mI (87) esp_image: segment 1: paddr=0001bb04 vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (87) esp_image: segment 2: paddr=0001bb2c vaddr=3ffb0000 size=023e8h (  9192) load[0m
+[0;32mI (94) esp_image: segment 3: paddr=0001df1c vaddr=40080000 size=020fch (  8444) load[0m
+[0;32mI (101) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=1afd8h (110552) map[0m
+[0;32mI (143) esp_image: segment 5: paddr=0003b000 vaddr=400820fc size=0bf10h ( 48912) load[0m
+[0;32mI (169) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (169) boot: Disabling RNG early entropy source...[0m
+[0;32mI (180) cpu_start: Multicore app[0m
+[0;32mI (188) cpu_start: Pro cpu start user code[0m
+[0;32mI (188) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (188) app_init: Application information:[0m
+[0;32mI (188) app_init: Project name:     esp32_ampermeter_display[0m
+[0;32mI (194) app_init: App version:      fc86329-dirty[0m
+[0;32mI (198) app_init: Compile time:     Oct 19 2025 23:17:55[0m
+[0;32mI (203) app_init: ELF file SHA256:  bb63e6be5...[0m
+[0;32mI (207) app_init: ESP-IDF:          v5.5[0m
+[0;32mI (211) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (215) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (219) efuse_init: Chip rev:         v1.1[0m
+[0;32mI (223) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (229) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (234) heap_init: At 3FFB2CE8 len 0002D318 (180 KiB): DRAM[0m
+[0;32mI (239) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (245) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (250) heap_init: At 4008E00C len 00011FF4 (71 KiB): IRAM[0m
+[0;32mI (257) spi_flash: detected chip: generic[0m
+[0;32mI (259) spi_flash: flash io: dio[0m
+[0;33mW (262) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (274) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (282) main_task: Started on CPU0[0m
+[0;32mI (292) main_task: Calling app_main()[0m
+[0;32mI (292) TANG_NANO: === Tang Nano 9K Power Monitor ===[0m
+[0;32mI (292) TANG_NANO: Starting application...[0m
+[0;32mI (292) TANG_NANO: Relay initialized on GPIO15[0m
+[0;32mI (292) TANG_NANO: Button initialized on GPIO5 (wiI BOD: Brownout detector was triggered[0m
+
+
+[0;32mI (13) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (13) boot: compile time Oct 19 2025 23:17:59[0m
+[0;32mI (13) boot: Multicore bootloader[0m
+[0;32mI (13) boot: chip revision: v1.1[0m
+[0;32mI (16) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (19) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (23) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (27) boot: Enabling RNG early entropy source...[0m
+[0;32mI (31) boot: Partition Table:[0m
+[0;32mI (34) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (40) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (46) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (53) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (60) boot: End of partition table[0m
+[0;32mI (63) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0badch ( 47836) map[0m
+[0;32mI (87) esp_image: segment 1: paddr=0001bb04 vaddr=3ff80000 size=00020h (    32) load[0m

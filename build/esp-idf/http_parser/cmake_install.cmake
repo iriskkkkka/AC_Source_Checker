@@ -1,4 +1,4 @@
-# Install script for directory: /home/iriska/esp/esp-idf/components/http_parser
+# Install script for directory: /home/iriska/esp-idf/components/http_parser
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

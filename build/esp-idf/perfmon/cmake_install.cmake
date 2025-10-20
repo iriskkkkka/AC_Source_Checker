@@ -1,4 +1,4 @@
-# Install script for directory: /home/iriska/esp/esp-idf/components/perfmon
+# Install script for directory: /home/iriska/esp-idf/components/perfmon
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
