@@ -8,7 +8,7 @@ This project implements a comprehensive AC power source monitoring system that m
 
 ## Demo
 
-[System Demo](transfomer.mp4)
+[Demo](transfomer.mp4)
 
 ## System Architecture
 
